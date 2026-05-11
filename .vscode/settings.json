@@ -1,0 +1,9 @@
+{
+    "ledgerDevTools.appSettings": {
+        "selectedDevice": "Nano S Plus",
+        "testsList": [
+            "test_app_name",
+            "test_version"
+        ]
+    }
+}

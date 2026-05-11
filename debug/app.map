@@ -1,0 +1,1110 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        0     1 PAGE_SIZE = 512
+       0        0        0     1 STACK_MIN_SIZE = DEFINED ( stack_min_size ) ? stack_min_size : 1500
+       0        0        0     1 END_STACK = ORIGIN ( SRAM ) + LENGTH ( SRAM )
+c0de0000 c0de0000     ab0b     4 .text
+c0de0000 c0de0000        0     1         _text = .
+c0de0000 c0de0000        0     1         _nvram_start = .
+c0de0000 c0de0000       16     2         build/flex/obj/sdk/lib_standard_app/main.o:(.boot)
+c0de0000 c0de0000        0     1                 $t.3
+c0de0001 c0de0001       16     1                 main
+c0de0016 c0de0016        0     1         _code = .
+c0de0016 c0de0016       de     2         build/flex/obj/app/src/apdu/dispatcher.o:(.text.apdu_dispatcher)
+c0de0016 c0de0016        0     1                 $t.0
+c0de0017 c0de0017       de     1                 apdu_dispatcher
+c0de00f4 c0de00f4       c8     4         build/flex/obj/app/src/app_main.o:(.text.app_main)
+c0de00f4 c0de00f4        0     1                 $t.0
+c0de00f5 c0de00f5       c8     1                 app_main
+c0de01bc c0de01bc       2c     2         build/flex/obj/app/src/handler/get_app_name.o:(.text.handler_get_app_name)
+c0de01bc c0de01bc        0     1                 $t.0
+c0de01bd c0de01bd       2c     1                 handler_get_app_name
+c0de01e8 c0de01e8       32     2         build/flex/obj/app/src/handler/get_version.o:(.text.handler_get_version)
+c0de01e8 c0de01e8        0     1                 $t.0
+c0de01e9 c0de01e9       32     1                 handler_get_version
+c0de021a c0de021a       4e     2         build/flex/obj/app/src/ui/menu_nbgl.o:(.text.ui_menu_main)
+c0de021a c0de021a        0     1                 $t.0
+c0de021b c0de021b       4e     1                 ui_menu_main
+c0de0268 c0de0268        6     2         build/flex/obj/app/src/ui/menu_nbgl.o:(.text.app_quit)
+c0de0268 c0de0268        0     1                 $t.1
+c0de0269 c0de0269        6     1                 app_quit
+c0de026e c0de026e       a2     2         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.text.os_io_handle_default_apdu)
+c0de026e c0de026e        0     1                 $t.0
+c0de026f c0de026f       a2     1                 os_io_handle_default_apdu
+c0de0310 c0de0310       70     2         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.text.get_version)
+c0de0310 c0de0310        0     1                 $t.1
+c0de0311 c0de0311       70     1                 get_version
+c0de0380 c0de0380       40     2         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.text.os_io_seph_cmd_printf)
+c0de0380 c0de0380        0     1                 $t.11
+c0de0381 c0de0381       40     1                 os_io_seph_cmd_printf
+c0de03c0 c0de03c0       5c     2         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.text.os_io_seph_cmd_piezo_play_tune)
+c0de03c0 c0de03c0        0     1                 $t.13
+c0de03c1 c0de03c1       5c     1                 os_io_seph_cmd_piezo_play_tune
+c0de041c c0de041c       aa     2         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.text.io_process_itc_ux_event)
+c0de041c c0de041c        0     1                 $t.1
+c0de041d c0de041d       aa     1                 io_process_itc_ux_event
+c0de04c6 c0de04c6       ac     2         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_seproxyhal_io_heartbeat)
+c0de04c6 c0de04c6        0     1                 $t.3
+c0de04c7 c0de04c7       ac     1                 io_seproxyhal_io_heartbeat
+c0de0572 c0de0572       3c     2         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_legacy_apdu_tx)
+c0de0572 c0de0572        0     1                 $t.9
+c0de0573 c0de0573       3c     1                 io_legacy_apdu_tx
+c0de05ae c0de05ae      280     2         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_legacy_apdu_rx)
+c0de05ae c0de05ae        0     1                 $t.10
+c0de05af c0de05af      280     1                 io_legacy_apdu_rx
+c0de082e c0de082e       4a     2         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_seproxyhal_init)
+c0de082e c0de082e        0     1                 $t.11
+c0de082f c0de082f       4a     1                 io_seproxyhal_init
+c0de0878 c0de0878       4c     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.layoutAddCallbackObj)
+c0de0878 c0de0878        0     1                 $t.0
+c0de0879 c0de0879       4c     1                 layoutAddCallbackObj
+c0de08c4 c0de08c4      1ec     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutGet)
+c0de08c4 c0de08c4        0     1                 $t.2
+c0de08c5 c0de08c5      1ec     1                 nbgl_layoutGet
+c0de0ab0 c0de0ab0      490     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.touchCallback)
+c0de0ab0 c0de0ab0        0     1                 $t.3
+c0de0ab1 c0de0ab1      490     1                 touchCallback
+c0de0f40 c0de0f40      870     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddUpFooter)
+c0de0f40 c0de0f40        0     1                 $t.4
+c0de0f41 c0de0f41      870     1                 nbgl_layoutAddUpFooter
+c0de17b0 c0de17b0       d2     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddSwipe)
+c0de17b0 c0de17b0        0     1                 $t.5
+c0de17b1 c0de17b1       d2     1                 nbgl_layoutAddSwipe
+c0de1882 c0de1882       c2     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddTopRightButton)
+c0de1882 c0de1882        0     1                 $t.7
+c0de1883 c0de1883       c2     1                 nbgl_layoutAddTopRightButton
+c0de1944 c0de1944      ade     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddExtendedFooter)
+c0de1944 c0de1944        0     1                 $t.9
+c0de1945 c0de1945      ade     1                 nbgl_layoutAddExtendedFooter
+c0de2422 c0de2422       3e     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddBottomButton)
+c0de2422 c0de2422        0     1                 $t.10
+c0de2423 c0de2423       3e     1                 nbgl_layoutAddBottomButton
+c0de2460 c0de2460       64     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddTouchableBar)
+c0de2460 c0de2460        0     1                 $t.11
+c0de2461 c0de2461       64     1                 nbgl_layoutAddTouchableBar
+c0de24c4 c0de24c4      562     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.addListItem)
+c0de24c4 c0de24c4        0     1                 $t.12
+c0de24c5 c0de24c5      562     1                 addListItem
+c0de2a26 c0de2a26       5e     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddSwitch)
+c0de2a26 c0de2a26        0     1                 $t.13
+c0de2a27 c0de2a27       5e     1                 nbgl_layoutAddSwitch
+c0de2a84 c0de2a84       48     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddText)
+c0de2a84 c0de2a84        0     1                 $t.14
+c0de2a85 c0de2a85       48     1                 nbgl_layoutAddText
+c0de2acc c0de2acc       62     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddTextWithAlias)
+c0de2acc c0de2acc        0     1                 $t.15
+c0de2acd c0de2acd       62     1                 nbgl_layoutAddTextWithAlias
+c0de2b2e c0de2b2e      224     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddTextContent)
+c0de2b2e c0de2b2e        0     1                 $t.17
+c0de2b2f c0de2b2f      224     1                 nbgl_layoutAddTextContent
+c0de2d54 c0de2d54      2b0     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddRadioChoice)
+c0de2d54 c0de2d54        0     1                 $t.18
+c0de2d55 c0de2d55      2b0     1                 nbgl_layoutAddRadioChoice
+c0de3004 c0de3004       8c     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddCenteredInfo)
+c0de3004 c0de3004        0     1                 $t.19
+c0de3005 c0de3005       8c     1                 nbgl_layoutAddCenteredInfo
+c0de3090 c0de3090      62c     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.addContentCenter)
+c0de3090 c0de3090        0     1                 $t.20
+c0de3091 c0de3091      62c     1                 addContentCenter
+c0de36bc c0de36bc       1a     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddContentCenter)
+c0de36bc c0de36bc        0     1                 $t.21
+c0de36bd c0de36bd       1a     1                 nbgl_layoutAddContentCenter
+c0de36d6 c0de36d6      346     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddQRCode)
+c0de36d6 c0de36d6        0     1                 $t.23
+c0de36d7 c0de36d7      346     1                 nbgl_layoutAddQRCode
+c0de3a1c c0de3a1c       2e     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddChoiceButtons)
+c0de3a1c c0de3a1c        0     1                 $t.24
+c0de3a1d c0de3a1d       2e     1                 nbgl_layoutAddChoiceButtons
+c0de3a4a c0de3a4a       28     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddHorizontalButtons)
+c0de3a4a c0de3a4a        0     1                 $t.25
+c0de3a4b c0de3a4b       28     1                 nbgl_layoutAddHorizontalButtons
+c0de3a74 c0de3a74      40e     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddTagValueList)
+c0de3a74 c0de3a74        0     1                 $t.26
+c0de3a75 c0de3a75      40e     1                 nbgl_layoutAddTagValueList
+c0de3e82 c0de3e82       72     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddSeparationLine)
+c0de3e82 c0de3e82        0     1                 $t.28
+c0de3e83 c0de3e83       72     1                 nbgl_layoutAddSeparationLine
+c0de3ef4 c0de3ef4      240     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddButton)
+c0de3ef4 c0de3ef4        0     1                 $t.29
+c0de3ef5 c0de3ef5      240     1                 nbgl_layoutAddButton
+c0de4134 c0de4134       2a     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddLongPressButton)
+c0de4134 c0de4134        0     1                 $t.30
+c0de4135 c0de4135       2a     1                 nbgl_layoutAddLongPressButton
+c0de415e c0de415e       26     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddFooter)
+c0de415e c0de415e        0     1                 $t.31
+c0de415f c0de415f       26     1                 nbgl_layoutAddFooter
+c0de4184 c0de4184       2a     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddSplitFooter)
+c0de4184 c0de4184        0     1                 $t.32
+c0de4185 c0de4185       2a     1                 nbgl_layoutAddSplitFooter
+c0de41ae c0de41ae      86a     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddHeader)
+c0de41ae c0de41ae        0     1                 $t.33
+c0de41af c0de41af      86a     1                 nbgl_layoutAddHeader
+c0de4a18 c0de4a18       36     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutAddProgressIndicator)
+c0de4a18 c0de4a18        0     1                 $t.34
+c0de4a19 c0de4a19       36     1                 nbgl_layoutAddProgressIndicator
+c0de4a4e c0de4a4e       48     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutDraw)
+c0de4a4e c0de4a4e        0     1                 $t.38
+c0de4a4f c0de4a4f       48     1                 nbgl_layoutDraw
+c0de4a96 c0de4a96       60     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.nbgl_layoutRelease)
+c0de4a96 c0de4a96        0     1                 $t.39
+c0de4a97 c0de4a97       60     1                 nbgl_layoutRelease
+c0de4af8 c0de4af8      110     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.text.animTickerCallback)
+c0de4af8 c0de4af8        0     1                 $t.40
+c0de4af9 c0de4af9      110     1                 animTickerCallback
+c0de4c08 c0de4c08      1b6     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.text.layoutNavigationCallback)
+c0de4c08 c0de4c08        0     1                 $t.0
+c0de4c09 c0de4c09      1b6     1                 layoutNavigationCallback
+c0de4dbe c0de4dbe      294     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.text.layoutNavigationPopulate)
+c0de4dbe c0de4dbe        0     1                 $t.1
+c0de4dbf c0de4dbf      294     1                 layoutNavigationPopulate
+c0de5052 c0de5052      232     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.text.nbgl_pageDrawInfo)
+c0de5052 c0de5052        0     1                 $t.2
+c0de5053 c0de5053      232     1                 nbgl_pageDrawInfo
+c0de5284 c0de5284       8c     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.text.nbgl_pageDrawConfirmation)
+c0de5284 c0de5284        0     1                 $t.3
+c0de5285 c0de5285       8c     1                 nbgl_pageDrawConfirmation
+c0de5310 c0de5310      53c     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.text.nbgl_pageDrawGenericContentExt)
+c0de5310 c0de5310        0     1                 $t.4
+c0de5311 c0de5311      53c     1                 nbgl_pageDrawGenericContentExt
+c0de584c c0de584c        a     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.text.nbgl_pageDrawGenericContent)
+c0de584c c0de584c        0     1                 $t.5
+c0de584d c0de584d        a     1                 nbgl_pageDrawGenericContent
+c0de5856 c0de5856        8     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.text.nbgl_pageRelease)
+c0de5856 c0de5856        0     1                 $t.6
+c0de5857 c0de5857        8     1                 nbgl_pageRelease
+c0de5860 c0de5860      12c     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.getNbTagValuesInPage)
+c0de5860 c0de5860        0     1                 $t.1
+c0de5861 c0de5861      12c     1                 getNbTagValuesInPage
+c0de598c c0de598c       b4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.nbgl_useCaseGetNbSwitchesInPage)
+c0de598c c0de598c        0     1                 $t.4
+c0de598d c0de598d       b4     1                 nbgl_useCaseGetNbSwitchesInPage
+c0de5a40 c0de5a40      1ce     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.useCaseHomeExt)
+c0de5a40 c0de5a40        0     1                 $t.9
+c0de5a41 c0de5a41      1ce     1                 useCaseHomeExt
+c0de5c0e c0de5c0e       7e     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displaySettingsPage)
+c0de5c0e c0de5c0e        0     1                 $t.12
+c0de5c0f c0de5c0f       7e     1                 displaySettingsPage
+c0de5c8c c0de5c8c      1d2     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.nbgl_useCaseGenericSettings)
+c0de5c8c c0de5c8c        0     1                 $t.14
+c0de5c8d c0de5c8d      1d2     1                 nbgl_useCaseGenericSettings
+c0de5e60 c0de5e60      290     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.getNbPagesForContent)
+c0de5e60 c0de5e60        0     1                 $t.15
+c0de5e61 c0de5e61      290     1                 getNbPagesForContent
+c0de60f0 c0de60f0      4c4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displayGenericContextPage)
+c0de60f0 c0de60f0        0     1                 $t.16
+c0de60f1 c0de60f1      4c4     1                 displayGenericContextPage
+c0de65b4 c0de65b4      120     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.nbgl_useCaseHomeAndSettings)
+c0de65b4 c0de65b4        0     1                 $t.18
+c0de65b5 c0de65b5      120     1                 nbgl_useCaseHomeAndSettings
+c0de66d4 c0de66d4       3e     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.bundleNavStartHome)
+c0de66d4 c0de66d4        0     1                 $t.19
+c0de66d5 c0de66d5       3e     1                 bundleNavStartHome
+c0de6712 c0de6712      4f4     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.pageCallback)
+c0de6712 c0de6712        0     1                 $t.22
+c0de6713 c0de6713      4f4     1                 pageCallback
+c0de6c06 c0de6c06       de     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.nbgl_useCaseChoice)
+c0de6c06 c0de6c06        0     1                 $t.24
+c0de6c07 c0de6c07       de     1                 nbgl_useCaseChoice
+c0de6ce4 c0de6ce4      102     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.pageModalCallback)
+c0de6ce4 c0de6ce4        0     1                 $t.28
+c0de6ce5 c0de6ce5      102     1                 pageModalCallback
+c0de6de6 c0de6de6       d2     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displayReviewPage)
+c0de6de6 c0de6de6        0     1                 $t.32
+c0de6de7 c0de6de7       d2     1                 displayReviewPage
+c0de6eb8 c0de6eb8      1c2     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.genericContextComputeNextPageParams)
+c0de6eb8 c0de6eb8        0     1                 $t.55
+c0de6eb9 c0de6eb9      1c2     1                 genericContextComputeNextPageParams
+c0de707a c0de707a       2e     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.bundleNavStartSettings)
+c0de707a c0de707a        0     1                 $t.56
+c0de707b c0de707b       2e     1                 bundleNavStartSettings
+c0de70a8 c0de70a8      27a     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displayFullValuePage)
+c0de70a8 c0de70a8        0     1                 $t.57
+c0de70a9 c0de70a9      27a     1                 displayFullValuePage
+c0de7322 c0de7322      288     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displaySecurityReport)
+c0de7322 c0de7322        0     1                 $t.58
+c0de7323 c0de7323      288     1                 displaySecurityReport
+c0de75aa c0de75aa      180     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.modalLayoutTouchCallback)
+c0de75aa c0de75aa        0     1                 $t.59
+c0de75ab c0de75ab      180     1                 modalLayoutTouchCallback
+c0de772c c0de772c      10c     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displayModalDetails)
+c0de772c c0de772c        0     1                 $t.60
+c0de772d c0de772d      10c     1                 displayModalDetails
+c0de7838 c0de7838      1e8     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displayDetailsPage)
+c0de7838 c0de7838        0     1                 $t.61
+c0de7839 c0de7839      1e8     1                 displayDetailsPage
+c0de7a20 c0de7a20      132     2         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.text.displayTagValueListModalPage)
+c0de7a20 c0de7a20        0     1                 $t.62
+c0de7a21 c0de7a21      132     1                 displayTagValueListModalPage
+c0de7b52 c0de7b52       26     2         build/flex/obj/sdk/lib_standard_app/buffer.o:(.text.buffer_copy)
+c0de7b52 c0de7b52        0     1                 $t.10
+c0de7b53 c0de7b53       26     1                 buffer_copy
+c0de7b78 c0de7b78        2     2         build/flex/obj/sdk/lib_standard_app/io.o:(.text.app_ticker_event_callback)
+c0de7b78 c0de7b78        0     1                 $t.0
+c0de7b79 c0de7b79        2     1                 app_ticker_event_callback
+c0de7b7a c0de7b7a       38     2         build/flex/obj/sdk/lib_standard_app/io.o:(.text.io_event)
+c0de7b7a c0de7b7a        0     1                 $t.1
+c0de7b7b c0de7b7b       38     1                 io_event
+c0de7bb2 c0de7bb2       10     2         build/flex/obj/sdk/lib_standard_app/io.o:(.text.io_init)
+c0de7bb2 c0de7bb2        0     1                 $t.2
+c0de7bb3 c0de7bb3       10     1                 io_init
+c0de7bc4 c0de7bc4       28     4         build/flex/obj/sdk/lib_standard_app/io.o:(.text.io_recv_command)
+c0de7bc4 c0de7bc4        0     1                 $t.3
+c0de7bc5 c0de7bc5       28     1                 io_recv_command
+c0de7bec c0de7bec       fc     4         build/flex/obj/sdk/lib_standard_app/io.o:(.text.io_send_response_buffers)
+c0de7bec c0de7bec        0     1                 $t.4
+c0de7bed c0de7bed       fc     1                 io_send_response_buffers
+c0de7ce8 c0de7ce8        6     2         build/flex/obj/sdk/lib_standard_app/main.o:(.text.app_exit)
+c0de7ce8 c0de7ce8        0     1                 $t.0
+c0de7ce9 c0de7ce9        6     1                 app_exit
+c0de7cee c0de7cee        c     2         build/flex/obj/sdk/lib_standard_app/main.o:(.text.common_app_init)
+c0de7cee c0de7cee        0     1                 $t.1
+c0de7cef c0de7cef        c     1                 common_app_init
+c0de7cfa c0de7cfa       62     2         build/flex/obj/sdk/lib_standard_app/main.o:(.text.standalone_app_main)
+c0de7cfa c0de7cfa        0     1                 $t.2
+c0de7cfb c0de7cfb       62     1                 standalone_app_main
+c0de7d5c c0de7d5c       38     2         build/flex/obj/sdk/lib_standard_app/parser.o:(.text.apdu_parser)
+c0de7d5c c0de7d5c        0     1                 $t.0
+c0de7d5d c0de7d5d       38     1                 apdu_parser
+c0de7d94 c0de7d94        e     2         build/flex/obj/sdk/lib_standard_app/write.o:(.text.write_u16_be)
+c0de7d94 c0de7d94        0     1                 $t.0
+c0de7d95 c0de7d95        e     1                 write_u16_be
+c0de7da2 c0de7da2       a4     2         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.text.ux_process_finger_event)
+c0de7da2 c0de7da2        0     1                 $t.0
+c0de7da3 c0de7da3       a4     1                 ux_process_finger_event
+c0de7e46 c0de7e46       bc     2         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.text.ux_process_ticker_event)
+c0de7e46 c0de7e46        0     1                 $t.1
+c0de7e47 c0de7e47       bc     1                 ux_process_ticker_event
+c0de7f02 c0de7f02       3c     2         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.text.ux_process_default_event)
+c0de7f02 c0de7f02        0     1                 $t.2
+c0de7f03 c0de7f03       3c     1                 ux_process_default_event
+c0de7f3e c0de7f3e       44     2         build/flex/obj/sdk/src/ledger_assert.o:(.text.assert_display_lr_and_pc)
+c0de7f3e c0de7f3e        0     1                 $t.0
+c0de7f3f c0de7f3f       44     1                 assert_display_lr_and_pc
+c0de7f82 c0de7f82       34     2         build/flex/obj/sdk/src/ledger_assert.o:(.text.assert_print_lr_and_pc)
+c0de7f82 c0de7f82        0     1                 $t.1
+c0de7f83 c0de7f83       34     1                 assert_print_lr_and_pc
+c0de7fb6 c0de7fb6       38     2         build/flex/obj/sdk/src/ledger_assert.o:(.text.assert_display_file_info)
+c0de7fb6 c0de7fb6        0     1                 $t.2
+c0de7fb7 c0de7fb7       38     1                 assert_display_file_info
+c0de7fee c0de7fee       16     2         build/flex/obj/sdk/src/ledger_assert.o:(.text.assert_print_file_info)
+c0de7fee c0de7fee        0     1                 $t.3
+c0de7fef c0de7fef       16     1                 assert_print_file_info
+c0de8004 c0de8004       30     2         build/flex/obj/sdk/src/ledger_assert.o:(.text.throw_display_lr)
+c0de8004 c0de8004        0     1                 $t.4
+c0de8005 c0de8005       30     1                 throw_display_lr
+c0de8034 c0de8034       1e     2         build/flex/obj/sdk/src/ledger_assert.o:(.text.throw_print_lr)
+c0de8034 c0de8034        0     1                 $t.5
+c0de8035 c0de8035       1e     1                 throw_print_lr
+c0de8052 c0de8052        6     2         build/flex/obj/sdk/src/ledger_assert.o:(.text.assert_exit)
+c0de8052 c0de8052        0     1                 $t.6
+c0de8053 c0de8053        6     1                 assert_exit
+c0de8058 c0de8058       46     4         build/flex/obj/sdk/src/ledger_assert.o:(.text.assert_display_exit)
+c0de8058 c0de8058        0     1                 $t.7
+c0de8059 c0de8059       46     1                 assert_display_exit
+c0de809e c0de809e        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_refresh)
+c0de809e c0de809e        0     1                 $t.0
+c0de809f c0de809f        0     1                 nbgl_refresh
+c0de80a8 c0de80a8        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_refreshSpecial)
+c0de80a8 c0de80a8        0     1                 $t.1
+c0de80a9 c0de80a9        0     1                 nbgl_refreshSpecial
+c0de80b2 c0de80b2        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_refreshSpecialWithPostRefresh)
+c0de80b2 c0de80b2        0     1                 $t.2
+c0de80b3 c0de80b3        0     1                 nbgl_refreshSpecialWithPostRefresh
+c0de80bc c0de80bc        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_objInit)
+c0de80bc c0de80bc        0     1                 $t.5
+c0de80bd c0de80bd        0     1                 nbgl_objInit
+c0de80c6 c0de80c6        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_objDraw)
+c0de80c6 c0de80c6        0     1                 $t.6
+c0de80c7 c0de80c7        0     1                 nbgl_objDraw
+c0de80d0 c0de80d0        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_objAllowDrawing)
+c0de80d0 c0de80d0        0     1                 $t.7
+c0de80d1 c0de80d1        0     1                 nbgl_objAllowDrawing
+c0de80da c0de80da        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenSet)
+c0de80da c0de80da        0     1                 $t.10
+c0de80db c0de80db        0     1                 nbgl_screenSet
+c0de80e4 c0de80e4        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenPush)
+c0de80e4 c0de80e4        0     1                 $t.11
+c0de80e5 c0de80e5        0     1                 nbgl_screenPush
+c0de80ee c0de80ee        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenRedraw)
+c0de80ee c0de80ee        0     1                 $t.12
+c0de80ef c0de80ef        0     1                 nbgl_screenRedraw
+c0de80f8 c0de80f8        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenPop)
+c0de80f8 c0de80f8        0     1                 $t.13
+c0de80f9 c0de80f9        0     1                 nbgl_screenPop
+c0de8102 c0de8102        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenUpdateTicker)
+c0de8102 c0de8102        0     1                 $t.19
+c0de8103 c0de8103        0     1                 nbgl_screenUpdateTicker
+c0de810c c0de810c        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenHandler)
+c0de810c c0de810c        0     1                 $t.22
+c0de810d c0de810d        0     1                 nbgl_screenHandler
+c0de8116 c0de8116        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_objPoolGet)
+c0de8116 c0de8116        0     1                 $t.23
+c0de8117 c0de8117        0     1                 nbgl_objPoolGet
+c0de8120 c0de8120        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_containerPoolGet)
+c0de8120 c0de8120        0     1                 $t.25
+c0de8121 c0de8121        0     1                 nbgl_containerPoolGet
+c0de812a c0de812a        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getFont)
+c0de812a c0de812a        0     1                 $t.27
+c0de812b c0de812b        0     1                 nbgl_getFont
+c0de8134 c0de8134        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getFontHeight)
+c0de8134 c0de8134        0     1                 $t.28
+c0de8135 c0de8135        0     1                 nbgl_getFontHeight
+c0de813e c0de813e        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getFontLineHeight)
+c0de813e c0de813e        0     1                 $t.29
+c0de813f c0de813f        0     1                 nbgl_getFontLineHeight
+c0de8148 c0de8148        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextHeightInWidth)
+c0de8148 c0de8148        0     1                 $t.33
+c0de8149 c0de8149        0     1                 nbgl_getTextHeightInWidth
+c0de8152 c0de8152        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextNbLinesInWidth)
+c0de8152 c0de8152        0     1                 $t.35
+c0de8153 c0de8153        0     1                 nbgl_getTextNbLinesInWidth
+c0de815c c0de815c        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextWidth)
+c0de815c c0de815c        0     1                 $t.37
+c0de815d c0de815d        0     1                 nbgl_getTextWidth
+c0de8166 c0de8166        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextMaxLenInNbLines)
+c0de8166 c0de8166        0     1                 $t.38
+c0de8167 c0de8167        0     1                 nbgl_getTextMaxLenInNbLines
+c0de8170 c0de8170        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_textReduceOnNbLines)
+c0de8170 c0de8170        0     1                 $t.39
+c0de8171 c0de8171        0     1                 nbgl_textReduceOnNbLines
+c0de817a c0de817a        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_touchHandler)
+c0de817a c0de817a        0     1                 $t.42
+c0de817b c0de817b        0     1                 nbgl_touchHandler
+c0de8184 c0de8184        a     1         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_touchGetTouchDuration)
+c0de8184 c0de8184        0     1                 $t.43
+c0de8185 c0de8185        0     1                 nbgl_touchGetTouchDuration
+c0de8190 c0de8190       10     4         build/flex/obj/sdk/src/nbgl_stubs.o:(.text.pic_init)
+c0de8190 c0de8190        0     1                 $t.51
+c0de8191 c0de8191        0     1                 pic_init
+c0de8199 c0de8199        0     1                 nbgl_trampoline_helper
+c0de819c c0de819c        0     1                 $d.52
+c0de81a0 c0de81a0        a     2         build/flex/obj/sdk/src/os.o:(.text.os_boot)
+c0de81a0 c0de81a0        0     1                 $t.0
+c0de81a1 c0de81a1        a     1                 os_boot
+c0de81aa c0de81aa       1c     2         build/flex/obj/sdk/src/os.o:(.text.os_longjmp)
+c0de81aa c0de81aa        0     1                 $t.3
+c0de81ab c0de81ab       1c     1                 os_longjmp
+c0de81c6 c0de81c6       16     2         build/flex/obj/sdk/src/os.o:(.text.compute_address_location)
+c0de81c6 c0de81c6        0     1                 $t.5
+c0de81c7 c0de81c7       16     1                 compute_address_location
+c0de81dc c0de81dc      60c     4         build/flex/obj/sdk/src/os_printf.o:(.text.mcu_usb_printf)
+c0de81dc c0de81dc        0     1                 $t.0
+c0de81dd c0de81dd      60c     1                 mcu_usb_printf
+c0de81dd c0de81dd      60c     1                 screen_printf
+c0de87e8 c0de87e8      688     4         build/flex/obj/sdk/src/os_printf.o:(.text.vformat_internal)
+c0de87e8 c0de87e8        0     1                 $t.1
+c0de87e9 c0de87e9      688     1                 vformat_internal
+c0de8e70 c0de8e70       58     2         build/flex/obj/sdk/src/os_printf.o:(.text.snprintf)
+c0de8e70 c0de8e70        0     1                 $t.2
+c0de8e71 c0de8e71       58     1                 snprintf
+c0de8ec8 c0de8ec8       32     2         build/flex/obj/sdk/src/os_printf.o:(.text.sprintf_output)
+c0de8ec8 c0de8ec8        0     1                 $t.3
+c0de8ec9 c0de8ec9       32     1                 sprintf_output
+c0de8efc c0de8efc       3c     4         build/flex/obj/sdk/src/pic.o:(.text.pic)
+c0de8efc c0de8efc        0     1                 $t.0
+c0de8efd c0de8efd       2c     1                 pic
+c0de8f28 c0de8f28        0     1                 $d.2
+c0de8f38 c0de8f38       10     4         build/flex/obj/sdk/src/pic.o:(.text.pic_internal)
+c0de8f38 c0de8f38        0     1                 $t.1
+c0de8f39 c0de8f39        c     1                 pic_internal
+c0de8f44 c0de8f44        0     1                 $d.3
+c0de8f48 c0de8f48        e     4         build/flex/obj/sdk/src/svc_call.o:(.text)
+c0de8f48 c0de8f48        0     1                 $t.0
+c0de8f49 c0de8f49        0     1                 SVC_Call
+c0de8f50 c0de8f50        0     1                 exception
+c0de8f56 c0de8f56       18     2         build/flex/obj/sdk/src/syscalls.o:(.text.nbgl_wait_pipeline)
+c0de8f56 c0de8f56        0     1                 $t.13
+c0de8f57 c0de8f57       18     1                 nbgl_wait_pipeline
+c0de8f6e c0de8f6e       20     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_pki_load_certificate)
+c0de8f6e c0de8f6e        0     1                 $t.113
+c0de8f6f c0de8f6f       20     1                 os_pki_load_certificate
+c0de8f8e c0de8f8e       16     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_perso_is_pin_set)
+c0de8f8e c0de8f8e        0     1                 $t.126
+c0de8f8f c0de8f8f       16     1                 os_perso_is_pin_set
+c0de8fa4 c0de8fa4       16     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_global_pin_is_validated)
+c0de8fa4 c0de8fa4        0     1                 $t.127
+c0de8fa5 c0de8fa5       16     1                 os_global_pin_is_validated
+c0de8fba c0de8fba       1a     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_ux)
+c0de8fba c0de8fba        0     1                 $t.133
+c0de8fbb c0de8fbb       1a     1                 os_ux
+c0de8fd4 c0de8fd4       14     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_flags)
+c0de8fd4 c0de8fd4        0     1                 $t.138
+c0de8fd5 c0de8fd5       14     1                 os_flags
+c0de8fe8 c0de8fe8       18     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_setting_get)
+c0de8fe8 c0de8fe8        0     1                 $t.145
+c0de8fe9 c0de8fe9       18     1                 os_setting_get
+c0de9000 c0de9000       18     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_registry_get_current_app_tag)
+c0de9000 c0de9000        0     1                 $t.149
+c0de9001 c0de9001       18     1                 os_registry_get_current_app_tag
+c0de9018 c0de9018       16     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_sched_exit)
+c0de9018 c0de9018        0     1                 $t.153
+c0de9019 c0de9019       16     1                 os_sched_exit
+c0de902e c0de902e       16     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_io_init)
+c0de902e c0de902e        0     1                 $t.159
+c0de902f c0de902f       16     1                 os_io_init
+c0de9044 c0de9044       18     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_io_start)
+c0de9044 c0de9044        0     1                 $t.160
+c0de9045 c0de9045       18     1                 os_io_start
+c0de905c c0de905c       18     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_io_stop)
+c0de905c c0de905c        0     1                 $t.161
+c0de905d c0de905d       18     1                 os_io_stop
+c0de9074 c0de9074       18     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_io_tx_cmd)
+c0de9074 c0de9074        0     1                 $t.162
+c0de9075 c0de9075       18     1                 os_io_tx_cmd
+c0de908c c0de908c       18     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_io_rx_evt)
+c0de908c c0de908c        0     1                 $t.163
+c0de908d c0de908d       18     1                 os_io_rx_evt
+c0de90a4 c0de90a4       14     2         build/flex/obj/sdk/src/syscalls.o:(.text.try_context_get)
+c0de90a4 c0de90a4        0     1                 $t.166
+c0de90a5 c0de90a5       14     1                 try_context_get
+c0de90b8 c0de90b8       1c     2         build/flex/obj/sdk/src/syscalls.o:(.text.try_context_set)
+c0de90b8 c0de90b8        0     1                 $t.167
+c0de90b9 c0de90b9       1c     1                 try_context_set
+c0de90d4 c0de90d4       1c     2         build/flex/obj/sdk/src/syscalls.o:(.text.os_sched_last_status)
+c0de90d4 c0de90d4        0     1                 $t.168
+c0de90d5 c0de90d5       1c     1                 os_sched_last_status
+c0de90f0 c0de90f0       16     2         build/flex/obj/sdk/src/syscalls.o:(.text.touch_get_last_info)
+c0de90f0 c0de90f0        0     1                 $t.179
+c0de90f1 c0de90f1       16     1                 touch_get_last_info
+c0de9108 c0de9108      1c6     4         /opt/flex-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(udivmoddi4.c.o):(.text)
+c0de9108 c0de9108        0     1                 $t.0
+c0de9109 c0de9109      1c6     1                 __udivmoddi4
+c0de92d0 c0de92d0        4     4         /opt/flex-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_memcpy.S.o):(.text)
+c0de92d0 c0de92d0        0     1                 $t.0
+c0de92d1 c0de92d1        4     1                 __aeabi_memcpy
+c0de92d1 c0de92d1        4     1                 __aeabi_memcpy4
+c0de92d1 c0de92d1        4     1                 __aeabi_memcpy8
+c0de92d4 c0de92d4        4     4         /opt/flex-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_memmove.S.o):(.text)
+c0de92d4 c0de92d4        0     1                 $t.0
+c0de92d5 c0de92d5        4     1                 __aeabi_memmove
+c0de92d5 c0de92d5        4     1                 __aeabi_memmove4
+c0de92d5 c0de92d5        4     1                 __aeabi_memmove8
+c0de92d8 c0de92d8       14     4         /opt/flex-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_memset.S.o):(.text)
+c0de92d8 c0de92d8        0     1                 $t.0
+c0de92d9 c0de92d9        a     1                 __aeabi_memset
+c0de92d9 c0de92d9        a     1                 __aeabi_memset4
+c0de92d9 c0de92d9        a     1                 __aeabi_memset8
+c0de92e5 c0de92e5        8     1                 __aeabi_memclr
+c0de92e5 c0de92e5        8     1                 __aeabi_memclr4
+c0de92e5 c0de92e5        8     1                 __aeabi_memclr8
+c0de92ec c0de92ec       14     4         /opt/flex-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_uldivmod.S.o):(.text)
+c0de92ec c0de92ec        0     1                 $t.0
+c0de92ed c0de92ed       14     1                 __aeabi_uldivmod
+c0de9300 c0de9300        4     2         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-explicit_bzero.o):(.text.explicit_bzero)
+c0de9300 c0de9300        0     1                 $t
+c0de9301 c0de9301        4     1                 explicit_bzero
+c0de9304 c0de9304        8     2         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-bzero.o):(.text.bzero)
+c0de9304 c0de9304        0     1                 $t
+c0de9305 c0de9305        8     1                 bzero
+c0de930c c0de930c       1c     2         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-memcpy-stub.o):(.text.memcpy)
+c0de930c c0de930c        0     1                 $t
+c0de930d c0de930d       1c     1                 memcpy
+c0de9328 c0de9328       34     2         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-memmove.o):(.text.memmove)
+c0de9328 c0de9328        0     1                 $t
+c0de9329 c0de9329       34     1                 memmove
+c0de935c c0de935c       10     2         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-memset.o):(.text.memset)
+c0de935c c0de935c        0     1                 $t
+c0de935d c0de935d       10     1                 memset
+c0de936c c0de936c       1c     4         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-setjmp.o):(.text)
+c0de936c c0de936c        0     1                 $t
+c0de936d c0de936d        c     1                 setjmp
+c0de9379 c0de9379        e     1                 longjmp
+c0de9388 c0de9388       10     2         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-strlen.o):(.text)
+c0de9388 c0de9388        0     1                 $t
+c0de9389 c0de9389       10     1                 strlen
+c0de9398 c0de9398       2a     2         /opt/flex-secure-sdk/arch/st33k1/lib/libc.a(lib_a-strncat.o):(.text.strncat)
+c0de9398 c0de9398        0     1                 $t
+c0de9399 c0de9399       2a     1                 strncat
+c0de93c2 c0de93c2        0     1         _ecode = .
+c0de93c2 c0de93c2       bb     1         build/flex/gen_src/glyphs.o:(.rodata.C_app_boilerplate_64px_bitmap)
+c0de93c2 c0de93c2       bb     1                 C_app_boilerplate_64px_bitmap
+c0de947d c0de947d        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_app_boilerplate_64px)
+c0de947d c0de947d        a     1                 C_app_boilerplate_64px
+c0de9487 c0de9487      12c     1         build/flex/gen_src/glyphs.o:(.rodata.C_switch_60_40_bitmap)
+c0de9487 c0de9487      12c     1                 C_switch_60_40_bitmap
+c0de95b3 c0de95b3        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_switch_60_40)
+c0de95b3 c0de95b3        a     1                 C_switch_60_40
+c0de95bd c0de95bd      202     1         build/flex/gen_src/glyphs.o:(.rodata.C_Important_Circle_64px_bitmap)
+c0de95bd c0de95bd      202     1                 C_Important_Circle_64px_bitmap
+c0de97bf c0de97bf        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Important_Circle_64px)
+c0de97bf c0de97bf        a     1                 C_Important_Circle_64px
+c0de97c9 c0de97c9      167     1         build/flex/gen_src/glyphs.o:(.rodata.C_Warning_64px_bitmap)
+c0de97c9 c0de97c9      167     1                 C_Warning_64px_bitmap
+c0de9930 c0de9930        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Warning_64px)
+c0de9930 c0de9930        a     1                 C_Warning_64px
+c0de993a c0de993a       94     1         build/flex/gen_src/glyphs.o:(.rodata.C_Back_40px_bitmap)
+c0de993a c0de993a       94     1                 C_Back_40px_bitmap
+c0de99ce c0de99ce        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Back_40px)
+c0de99ce c0de99ce        a     1                 C_Back_40px
+c0de99d8 c0de99d8       5c     1         build/flex/gen_src/glyphs.o:(.rodata.C_Check_40px_bitmap)
+c0de99d8 c0de99d8       5c     1                 C_Check_40px_bitmap
+c0de9a34 c0de9a34        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Check_40px)
+c0de9a34 c0de9a34        a     1                 C_Check_40px
+c0de9a3e c0de9a3e       64     1         build/flex/gen_src/glyphs.o:(.rodata.C_Chevron_40px_bitmap)
+c0de9a3e c0de9a3e       64     1                 C_Chevron_40px_bitmap
+c0de9aa2 c0de9aa2        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Chevron_40px)
+c0de9aa2 c0de9aa2        a     1                 C_Chevron_40px
+c0de9aac c0de9aac       7e     1         build/flex/gen_src/glyphs.o:(.rodata.C_Chevron_Back_40px_bitmap)
+c0de9aac c0de9aac       7e     1                 C_Chevron_Back_40px_bitmap
+c0de9b2a c0de9b2a        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Chevron_Back_40px)
+c0de9b2a c0de9b2a        a     1                 C_Chevron_Back_40px
+c0de9b34 c0de9b34       79     1         build/flex/gen_src/glyphs.o:(.rodata.C_Chevron_Next_40px_bitmap)
+c0de9b34 c0de9b34       79     1                 C_Chevron_Next_40px_bitmap
+c0de9bad c0de9bad        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Chevron_Next_40px)
+c0de9bad c0de9bad        a     1                 C_Chevron_Next_40px
+c0de9bb7 c0de9bb7       8d     1         build/flex/gen_src/glyphs.o:(.rodata.C_Close_40px_bitmap)
+c0de9bb7 c0de9bb7       8d     1                 C_Close_40px_bitmap
+c0de9c44 c0de9c44        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Close_40px)
+c0de9c44 c0de9c44        a     1                 C_Close_40px
+c0de9c4e c0de9c4e       39     1         build/flex/gen_src/glyphs.o:(.rodata.C_Info_40px_bitmap)
+c0de9c4e c0de9c4e       39     1                 C_Info_40px_bitmap
+c0de9c87 c0de9c87        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Info_40px)
+c0de9c87 c0de9c87        a     1                 C_Info_40px
+c0de9c91 c0de9c91       d6     1         build/flex/gen_src/glyphs.o:(.rodata.C_Mini_Push_40px_bitmap)
+c0de9c91 c0de9c91       d6     1                 C_Mini_Push_40px_bitmap
+c0de9d67 c0de9d67        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Mini_Push_40px)
+c0de9d67 c0de9d67        a     1                 C_Mini_Push_40px
+c0de9d71 c0de9d71      1b4     1         build/flex/gen_src/glyphs.o:(.rodata.C_Privacy_40px_bitmap)
+c0de9d71 c0de9d71      1b4     1                 C_Privacy_40px_bitmap
+c0de9f25 c0de9f25        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Privacy_40px)
+c0de9f25 c0de9f25        a     1                 C_Privacy_40px
+c0de9f2f c0de9f2f      19b     1         build/flex/gen_src/glyphs.o:(.rodata.C_Settings_40px_bitmap)
+c0de9f2f c0de9f2f      19b     1                 C_Settings_40px_bitmap
+c0dea0ca c0dea0ca        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Settings_40px)
+c0dea0ca c0dea0ca        a     1                 C_Settings_40px
+c0dea0d4 c0dea0d4       ef     1         build/flex/gen_src/glyphs.o:(.rodata.C_Warning_40px_bitmap)
+c0dea0d4 c0dea0d4       ef     1                 C_Warning_40px_bitmap
+c0dea1c3 c0dea1c3        a     1         build/flex/gen_src/glyphs.o:(.rodata.C_Warning_40px)
+c0dea1c3 c0dea1c3        a     1                 C_Warning_40px
+c0dea1cd c0dea1cd      68b     1         <internal>:(.text)
+c0dea858 c0dea858       41     4         <internal>:(.text)
+c0dea89c c0dea89c        c     4         build/flex/obj/app/src/ui/menu_nbgl.o:(.rodata.settingContents)
+c0dea89c c0dea89c        c     1                 settingContents
+c0dea8a8 c0dea8a8       10     4         build/flex/obj/app/src/ui/menu_nbgl.o:(.rodata.infoList)
+c0dea8a8 c0dea8a8       10     1                 infoList
+c0dea8b8 c0dea8b8        b     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.rodata.nbMaxElementsPerContentType)
+c0dea8b8 c0dea8b8        b     1                 nbMaxElementsPerContentType
+c0dea8c4 c0dea8c4       14     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.rodata..L__const.displayAddressQRCode.headerDesc)
+c0dea8c4 c0dea8c4       14     1                 .L__const.displayAddressQRCode.headerDesc
+c0dea8d8 c0dea8d8       20     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.rodata..L__const.displaySkipWarning.info)
+c0dea8d8 c0dea8d8       20     1                 .L__const.displaySkipWarning.info
+c0dea8f8 c0dea8f8       1c     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.rodata..L__const.displaySecurityReport.layoutDescription)
+c0dea8f8 c0dea8f8       1c     1                 .L__const.displaySecurityReport.layoutDescription
+c0dea914 c0dea914       14     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.rodata..L__const.displaySecurityReport.headerDesc)
+c0dea914 c0dea914       14     1                 .L__const.displaySecurityReport.headerDesc
+c0dea928 c0dea928       48     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.rodata.securityReportItems)
+c0dea928 c0dea928       48     1                 securityReportItems
+c0dea970 c0dea970       1c     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.rodata..L__const.displayInfosListModal.info)
+c0dea970 c0dea970       1c     1                 .L__const.displayInfosListModal.info
+c0dea98c c0dea98c       20     1         <internal>:(.text)
+c0dea9ac c0dea9ac        0     1         . = ALIGN ( 4 )
+c0dea9ac c0dea9ac        0     1         _etext = .
+c0dea9ac c0dea9ac       54     1         . = ALIGN ( PAGE_SIZE )
+c0deaa00 c0deaa00        0     1         _nvram_data = .
+c0deaa00 c0deaa00        0     1         . = ALIGN ( PAGE_SIZE )
+c0deaa00 c0deaa00        0     1         _envram_data = .
+c0deaa00 c0deaa00        0     1         _install_parameters = .
+c0deaa00 c0deaa00      10b     1         build/flex/obj/sdk/src/app_metadata.o:(.install_parameters)
+c0deaa00 c0deaa00      10b     1                 install_parameters
+c0deab0b c0deab0b        0     1         _einstall_parameters = .
+c0deab0b c0deab0b        0     1         _nvram_end = .
+d0000000 d0000000        0     1 .data
+d0000000 d0000000        0     1         . = ALIGN ( 4 )
+d0000000 d0000000        0     1         _data = .
+d0000000 d0000000        0     1         _edata = .
+d0000000 d0000000        0     1 
+da7a0000 da7a0000     9000     4 .bss
+da7a0000 da7a0000        0     1         _bss = .
+da7a0000 da7a0000      111     1         build/flex/obj/sdk/io/src/os_io.o:(.bss.G_io_tx_buffer)
+da7a0000 da7a0000      111     1                 G_io_tx_buffer
+da7a0111 da7a0111      111     1         build/flex/obj/sdk/io/src/os_io.o:(.bss.G_io_rx_buffer)
+da7a0111 da7a0111      111     1                 G_io_rx_buffer
+da7a0222 da7a0222        1     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.bss.need_to_start_io)
+da7a0222 da7a0222        1     1                 need_to_start_io
+da7a0224 da7a0224        c     4         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.bss.G_io_app)
+da7a0224 da7a0224        c     1                 G_io_app
+da7a0230 da7a0230        1     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.bss.io_os_legacy_apdu_type)
+da7a0230 da7a0230        1     1                 io_os_legacy_apdu_type
+da7a0234 da7a0234      21c     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.bss.gLayout)
+da7a0234 da7a0234      21c     1                 gLayout
+da7a0450 da7a0450        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.bss.topLayout)
+da7a0450 da7a0450        4     1                 topLayout
+da7a0454 da7a0454        1     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.bss.nbTouchableControls)
+da7a0454 da7a0454        1     1                 nbTouchableControls
+da7a0455 da7a0455        b     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.bss.navText)
+da7a0455 da7a0455        b     1                 navText
+da7a0460 da7a0460        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onQuit)
+da7a0460 da7a0460        4     1                 onQuit
+da7a0464 da7a0464        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onNav)
+da7a0464 da7a0464        4     1                 onNav
+da7a0468 da7a0468        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onControls)
+da7a0468 da7a0468        4     1                 onControls
+da7a046c da7a046c        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.pageTitle)
+da7a046c da7a046c        4     1                 pageTitle
+da7a0470 da7a0470        1     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.navType)
+da7a0470 da7a0470        1     1                 navType
+da7a0474 da7a0474       90     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.genericContext)
+da7a0474 da7a0474       90     1                 genericContext
+da7a0504 da7a0504       a8     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.localContentsList)
+da7a0504 da7a0504       a8     1                 localContentsList
+da7a05ac da7a05ac       28     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.bundleNavContext)
+da7a05ac da7a05ac       28     1                 bundleNavContext
+da7a05d4 da7a05d4        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.pageContext)
+da7a05d4 da7a05d4        4     1                 pageContext
+da7a05d8 da7a05d8        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onChoice)
+da7a05d8 da7a05d8        4     1                 onChoice
+da7a05dc da7a05dc        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onModalConfirm)
+da7a05dc da7a05dc        4     1                 onModalConfirm
+da7a05e0 da7a05e0        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.modalPageContext)
+da7a05e0 da7a05e0        4     1                 modalPageContext
+da7a05e4 da7a05e4        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onAction)
+da7a05e4 da7a05e4        4     1                 onAction
+da7a05e8 da7a05e8        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onContinue)
+da7a05e8 da7a05e8        4     1                 onContinue
+da7a05ec da7a05ec       1c     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.navInfo)
+da7a05ec da7a05ec       1c     1                 navInfo
+da7a0608 da7a0608       38     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.addressConfirmationContext)
+da7a0608 da7a0608       38     1                 addressConfirmationContext
+da7a0640 da7a0640       80     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.tmpString)
+da7a0640 da7a0640       80     1                 tmpString
+da7a06c0 da7a06c0        4     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.onContentAction)
+da7a06c0 da7a06c0        4     1                 onContentAction
+da7a06c4 da7a06c4       80     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.genericContextPagesInfo)
+da7a06c4 da7a06c4       80     1                 genericContextPagesInfo
+da7a0744 da7a0744       80     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.reducedAddress)
+da7a0744 da7a0744       80     1                 reducedAddress
+da7a07c4 da7a07c4       10     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.detailsContext)
+da7a07c4 da7a07c4       10     1                 detailsContext
+da7a07d4 da7a07d4       10     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.displayDetailsPage.currentPair)
+da7a07d4 da7a07d4       10     1                 displayDetailsPage.currentPair
+da7a07e4 da7a07e4       10     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.bss.modalContextPagesInfo)
+da7a07e4 da7a07e4       10     1                 modalContextPagesInfo
+da7a07f4 da7a07f4      110     1         build/flex/obj/sdk/lib_standard_app/io.o:(.bss.G_io_seproxyhal_spi_buffer)
+da7a07f4 da7a07f4      110     1                 G_io_seproxyhal_spi_buffer
+da7a0904 da7a0904        1     1         build/flex/obj/sdk/lib_standard_app/io.o:(.bss.need_to_start_io)
+da7a0904 da7a0904        1     1                 need_to_start_io
+da7a0908 da7a0908       20     4         build/flex/obj/sdk/lib_standard_app/main.o:(.bss.G_ux_params)
+da7a0908 da7a0908       20     1                 G_ux_params
+da7a0928 da7a0928        1     1         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.bss.G_io_u2f)
+da7a0928 da7a0928        1     1                 G_io_u2f
+da7a092a da7a092a        6     2         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.bss.pos)
+da7a092a da7a092a        6     1                 pos
+da7a0930 da7a0930        4     4         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.bss.nbTicks)
+da7a0930 da7a0930        4     1                 nbTicks
+da7a0934 da7a0934       82     1         build/flex/obj/sdk/src/ledger_assert.o:(.bss.assert_buffer)
+da7a0934 da7a0934       82     1                 assert_buffer
+da7a09b6 da7a09b6        0     1         _ebss = .
+da7a09b6 da7a09b6        2     1         . = ALIGN ( 4 )
+da7a09b8 da7a09b8        0     1         app_stack_canary = .
+da7a09b8 da7a09b8        4     1         . += 4
+da7a09bc da7a09bc        0     1         _stack = .
+da7a09bc da7a09bc     8644     1         . = END_STACK
+da7a9000 da7a9000        0     1         _estack = .
+da7a9000 da7a9000        0     1 
+d0000000 d0000000       10     4 DEBUG
+d0000000 d0000000       10     4         <internal>:(.ARM.exidx)
+       0        0       5d     1 .comment
+       0        0       5d     1         <internal>:(.comment)
+       0        0     2cdf     1 .debug_info
+       0        0       48     1         build/flex/obj/app/src/apdu/dispatcher.o:(.debug_info)
+      48       48       3b     1         build/flex/obj/app/src/app_main.o:(.debug_info)
+      83       83       3b     1         build/flex/obj/app/src/handler/get_app_name.o:(.debug_info)
+      be       be       3b     1         build/flex/obj/app/src/handler/get_version.o:(.debug_info)
+      f9       f9       27     1         build/flex/obj/app/src/ui/menu_nbgl.o:(.debug_info)
+     120      120       23     1         build/flex/obj/sdk/io/src/os_io.o:(.debug_info)
+     143      143       40     1         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.debug_info)
+     183      183       3c     1         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_info)
+     1bf      1bf       3b     1         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.debug_info)
+     1fa      1fa       4f     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_info)
+     249      249      406     1         build/flex/obj/sdk/lib_blewbxx/src/ble_cmd.o:(.debug_info)
+     64f      64f      450     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o:(.debug_info)
+     a9f      a9f      130     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger_profile_apdu.o:(.debug_info)
+     bcf      bcf      348     1         build/flex/obj/sdk/lib_lists/lists.o:(.debug_info)
+     f17      f17      2d5     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.debug_info)
+    11ec     11ec       73     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.debug_info)
+    125f     125f       ac     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.debug_info)
+    130b     130b      6f2     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.debug_info)
+    19fd     19fd       27     1         build/flex/obj/sdk/lib_standard_app/base58.o:(.debug_info)
+    1a24     1a24       27     1         build/flex/obj/sdk/lib_standard_app/bip32.o:(.debug_info)
+    1a4b     1a4b      1a7     1         build/flex/obj/sdk/lib_standard_app/buffer.o:(.debug_info)
+    1bf2     1bf2       27     1         build/flex/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_info)
+    1c19     1c19       3f     1         build/flex/obj/sdk/lib_standard_app/format.o:(.debug_info)
+    1c58     1c58       3f     1         build/flex/obj/sdk/lib_standard_app/io.o:(.debug_info)
+    1c97     1c97       27     1         build/flex/obj/sdk/lib_standard_app/main.o:(.debug_info)
+    1cbe     1cbe       23     1         build/flex/obj/sdk/lib_standard_app/parser.o:(.debug_info)
+    1ce1     1ce1       27     1         build/flex/obj/sdk/lib_standard_app/read.o:(.debug_info)
+    1d08     1d08       3f     1         build/flex/obj/sdk/lib_standard_app/varint.o:(.debug_info)
+    1d47     1d47       27     1         build/flex/obj/sdk/lib_standard_app/write.o:(.debug_info)
+    1d6e     1d6e       27     1         build/flex/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_info)
+    1d95     1d95       27     1         build/flex/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_info)
+    1dbc     1dbc      114     1         build/flex/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_info)
+    1ed0     1ed0       27     1         build/flex/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_info)
+    1ef7     1ef7       27     1         build/flex/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_info)
+    1f1e     1f1e      203     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_info)
+    2121     2121       27     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_info)
+    2148     2148       ab     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_info)
+    21f3     21f3       27     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_info)
+    221a     221a       7c     1         build/flex/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_info)
+    2296     2296       27     1         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_info)
+    22bd     22bd       65     1         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.debug_info)
+    2322     2322       83     1         build/flex/obj/sdk/protocol/src/ledger_protocol.o:(.debug_info)
+    23a5     23a5      689     1         build/flex/obj/sdk/qrcode/src/qrcodegen.o:(.debug_info)
+    2a2e     2a2e       27     1         build/flex/obj/sdk/src/cx_hash_iovec.o:(.debug_info)
+    2a55     2a55       23     1         build/flex/obj/sdk/src/cx_wrappers.o:(.debug_info)
+    2a78     2a78       27     1         build/flex/obj/sdk/src/ledger_assert.o:(.debug_info)
+    2a9f     2a9f       7b     1         build/flex/obj/sdk/src/os.o:(.debug_info)
+    2b1a     2b1a      150     1         build/flex/obj/sdk/src/os_printf.o:(.debug_info)
+    2c6a     2c6a       27     1         build/flex/obj/sdk/src/pic.o:(.debug_info)
+    2c91     2c91       27     1         build/flex/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_info)
+    2cb8     2cb8       27     1         build/flex/obj/sdk/src/syscalls.o:(.debug_info)
+       0        0      d5e     1 .debug_abbrev
+       0        0       40     1         build/flex/obj/app/src/apdu/dispatcher.o:(.debug_abbrev)
+      40       40       40     1         build/flex/obj/app/src/app_main.o:(.debug_abbrev)
+      80       80       40     1         build/flex/obj/app/src/handler/get_app_name.o:(.debug_abbrev)
+      c0       c0       40     1         build/flex/obj/app/src/handler/get_version.o:(.debug_abbrev)
+     100      100       1a     1         build/flex/obj/app/src/ui/menu_nbgl.o:(.debug_abbrev)
+     11a      11a       18     1         build/flex/obj/sdk/io/src/os_io.o:(.debug_abbrev)
+     132      132       42     1         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.debug_abbrev)
+     174      174       40     1         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_abbrev)
+     1b4      1b4       40     1         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.debug_abbrev)
+     1f4      1f4       4f     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_abbrev)
+     243      243       b1     1         build/flex/obj/sdk/lib_blewbxx/src/ble_cmd.o:(.debug_abbrev)
+     2f4      2f4       af     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o:(.debug_abbrev)
+     3a3      3a3       62     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger_profile_apdu.o:(.debug_abbrev)
+     405      405       af     1         build/flex/obj/sdk/lib_lists/lists.o:(.debug_abbrev)
+     4b4      4b4       71     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.debug_abbrev)
+     525      525       51     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.debug_abbrev)
+     576      576       62     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.debug_abbrev)
+     5d8      5d8       7e     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.debug_abbrev)
+     656      656       1a     1         build/flex/obj/sdk/lib_standard_app/base58.o:(.debug_abbrev)
+     670      670       1a     1         build/flex/obj/sdk/lib_standard_app/bip32.o:(.debug_abbrev)
+     68a      68a       71     1         build/flex/obj/sdk/lib_standard_app/buffer.o:(.debug_abbrev)
+     6fb      6fb       1a     1         build/flex/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_abbrev)
+     715      715       42     1         build/flex/obj/sdk/lib_standard_app/format.o:(.debug_abbrev)
+     757      757       42     1         build/flex/obj/sdk/lib_standard_app/io.o:(.debug_abbrev)
+     799      799       1a     1         build/flex/obj/sdk/lib_standard_app/main.o:(.debug_abbrev)
+     7b3      7b3       18     1         build/flex/obj/sdk/lib_standard_app/parser.o:(.debug_abbrev)
+     7cb      7cb       1a     1         build/flex/obj/sdk/lib_standard_app/read.o:(.debug_abbrev)
+     7e5      7e5       42     1         build/flex/obj/sdk/lib_standard_app/varint.o:(.debug_abbrev)
+     827      827       1a     1         build/flex/obj/sdk/lib_standard_app/write.o:(.debug_abbrev)
+     841      841       1a     1         build/flex/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_abbrev)
+     85b      85b       1a     1         build/flex/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_abbrev)
+     875      875       71     1         build/flex/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_abbrev)
+     8e6      8e6       1a     1         build/flex/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_abbrev)
+     900      900       1a     1         build/flex/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_abbrev)
+     91a      91a       5e     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_abbrev)
+     978      978       1a     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_abbrev)
+     992      992       5e     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_abbrev)
+     9f0      9f0       1a     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_abbrev)
+     a0a      a0a       60     1         build/flex/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_abbrev)
+     a6a      a6a       1a     1         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_abbrev)
+     a84      a84       51     1         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.debug_abbrev)
+     ad5      ad5       71     1         build/flex/obj/sdk/protocol/src/ledger_protocol.o:(.debug_abbrev)
+     b46      b46       ad     1         build/flex/obj/sdk/qrcode/src/qrcodegen.o:(.debug_abbrev)
+     bf3      bf3       1a     1         build/flex/obj/sdk/src/cx_hash_iovec.o:(.debug_abbrev)
+     c0d      c0d       18     1         build/flex/obj/sdk/src/cx_wrappers.o:(.debug_abbrev)
+     c25      c25       1a     1         build/flex/obj/sdk/src/ledger_assert.o:(.debug_abbrev)
+     c3f      c3f       53     1         build/flex/obj/sdk/src/os.o:(.debug_abbrev)
+     c92      c92       7e     1         build/flex/obj/sdk/src/os_printf.o:(.debug_abbrev)
+     d10      d10       1a     1         build/flex/obj/sdk/src/pic.o:(.debug_abbrev)
+     d2a      d2a       1a     1         build/flex/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_abbrev)
+     d44      d44       1a     1         build/flex/obj/sdk/src/syscalls.o:(.debug_abbrev)
+       0        0    13ffb     1 .debug_line
+       0        0       e1     1         build/flex/obj/app/src/apdu/dispatcher.o:(.debug_line)
+      e1       e1       bf     1         build/flex/obj/app/src/app_main.o:(.debug_line)
+     1a0      1a0       82     1         build/flex/obj/app/src/handler/get_app_name.o:(.debug_line)
+     222      222       85     1         build/flex/obj/app/src/handler/get_version.o:(.debug_line)
+     2a7      2a7       72     1         build/flex/obj/app/src/ui/menu_nbgl.o:(.debug_line)
+     319      319       ad     1         build/flex/obj/sdk/io/src/os_io.o:(.debug_line)
+     3c6      3c6      169     1         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.debug_line)
+     52f      52f      3c3     1         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_line)
+     8f2      8f2      184     1         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.debug_line)
+     a76      a76      3fb     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_line)
+     e71      e71      93c     1         build/flex/obj/sdk/lib_blewbxx/src/ble_cmd.o:(.debug_line)
+    17ad     17ad     1617     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o:(.debug_line)
+    2dc4     2dc4      830     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger_profile_apdu.o:(.debug_line)
+    35f4     35f4      a65     1         build/flex/obj/sdk/lib_lists/lists.o:(.debug_line)
+    4059     4059     3576     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.debug_line)
+    75cf     75cf      311     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.debug_line)
+    78e0     78e0      749     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.debug_line)
+    8029     8029     31a4     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.debug_line)
+    b1cd     b1cd      252     1         build/flex/obj/sdk/lib_standard_app/base58.o:(.debug_line)
+    b41f     b41f      13e     1         build/flex/obj/sdk/lib_standard_app/bip32.o:(.debug_line)
+    b55d     b55d      66e     1         build/flex/obj/sdk/lib_standard_app/buffer.o:(.debug_line)
+    bbcb     bbcb      1f1     1         build/flex/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_line)
+    bdbc     bdbc      2e9     1         build/flex/obj/sdk/lib_standard_app/format.o:(.debug_line)
+    c0a5     c0a5      1b5     1         build/flex/obj/sdk/lib_standard_app/io.o:(.debug_line)
+    c25a     c25a       cd     1         build/flex/obj/sdk/lib_standard_app/main.o:(.debug_line)
+    c327     c327       a6     1         build/flex/obj/sdk/lib_standard_app/parser.o:(.debug_line)
+    c3cd     c3cd      155     1         build/flex/obj/sdk/lib_standard_app/read.o:(.debug_line)
+    c522     c522      14b     1         build/flex/obj/sdk/lib_standard_app/varint.o:(.debug_line)
+    c66d     c66d      172     1         build/flex/obj/sdk/lib_standard_app/write.o:(.debug_line)
+    c7df     c7df      2f0     1         build/flex/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_line)
+    cacf     cacf      527     1         build/flex/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_line)
+    cff6     cff6      5a1     1         build/flex/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_line)
+    d597     d597      192     1         build/flex/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_line)
+    d729     d729      115     1         build/flex/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_line)
+    d83e     d83e      bb3     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_line)
+    e3f1     e3f1      3cb     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_line)
+    e7bc     e7bc      758     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_line)
+    ef14     ef14      2e3     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_line)
+    f1f7     f1f7      356     1         build/flex/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_line)
+    f54d     f54d       96     1         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_line)
+    f5e3     f5e3      184     1         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.debug_line)
+    f767     f767      38d     1         build/flex/obj/sdk/protocol/src/ledger_protocol.o:(.debug_line)
+    faf4     faf4     1be1     1         build/flex/obj/sdk/qrcode/src/qrcodegen.o:(.debug_line)
+   116d5    116d5      2a1     1         build/flex/obj/sdk/src/cx_hash_iovec.o:(.debug_line)
+   11976    11976       a7     1         build/flex/obj/sdk/src/cx_wrappers.o:(.debug_line)
+   11a1d    11a1d      128     1         build/flex/obj/sdk/src/ledger_assert.o:(.debug_line)
+   11b45    11b45      4c9     1         build/flex/obj/sdk/src/os.o:(.debug_line)
+   1200e    1200e      905     1         build/flex/obj/sdk/src/os_printf.o:(.debug_line)
+   12913    12913       9e     1         build/flex/obj/sdk/src/pic.o:(.debug_line)
+   129b1    129b1      14f     1         build/flex/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_line)
+   12b00    12b00     14fb     1         build/flex/obj/sdk/src/syscalls.o:(.debug_line)
+       0        0     4ff4     4 .debug_frame
+       0        0       34     4         build/flex/obj/app/src/apdu/dispatcher.o:(.debug_frame)
+      34       34       3c     4         build/flex/obj/app/src/app_main.o:(.debug_frame)
+      70       70       30     4         build/flex/obj/app/src/handler/get_app_name.o:(.debug_frame)
+      a0       a0       30     4         build/flex/obj/app/src/handler/get_version.o:(.debug_frame)
+      d0       d0       40     4         build/flex/obj/app/src/ui/menu_nbgl.o:(.debug_frame)
+     110      110       34     4         build/flex/obj/sdk/io/src/os_io.o:(.debug_frame)
+     144      144       54     4         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.debug_frame)
+     198      198      288     4         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_frame)
+     420      420       6c     4         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.debug_frame)
+     48c      48c      17c     4         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_frame)
+     608      608      1e4     4         build/flex/obj/sdk/lib_blewbxx/src/ble_cmd.o:(.debug_frame)
+     7ec      7ec      2c4     4         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o:(.debug_frame)
+     ab0      ab0      1f0     4         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger_profile_apdu.o:(.debug_frame)
+     ca0      ca0      298     4         build/flex/obj/sdk/lib_lists/lists.o:(.debug_frame)
+     f38      f38      534     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.debug_frame)
+    146c     146c       58     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.debug_frame)
+    14c4     14c4       e8     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.debug_frame)
+    15ac     15ac      920     4         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.debug_frame)
+    1ecc     1ecc       64     4         build/flex/obj/sdk/lib_standard_app/base58.o:(.debug_frame)
+    1f30     1f30       60     4         build/flex/obj/sdk/lib_standard_app/bip32.o:(.debug_frame)
+    1f90     1f90      1ec     4         build/flex/obj/sdk/lib_standard_app/buffer.o:(.debug_frame)
+    217c     217c       f4     4         build/flex/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_frame)
+    2270     2270       c0     4         build/flex/obj/sdk/lib_standard_app/format.o:(.debug_frame)
+    2330     2330       a4     4         build/flex/obj/sdk/lib_standard_app/io.o:(.debug_frame)
+    23d4     23d4       70     4         build/flex/obj/sdk/lib_standard_app/main.o:(.debug_frame)
+    2444     2444       24     4         build/flex/obj/sdk/lib_standard_app/parser.o:(.debug_frame)
+    2468     2468       84     4         build/flex/obj/sdk/lib_standard_app/read.o:(.debug_frame)
+    24ec     24ec       58     4         build/flex/obj/sdk/lib_standard_app/varint.o:(.debug_frame)
+    2544     2544       84     4         build/flex/obj/sdk/lib_standard_app/write.o:(.debug_frame)
+    25c8     25c8      168     4         build/flex/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_frame)
+    2730     2730      1f0     4         build/flex/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_frame)
+    2920     2920       ac     4         build/flex/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_frame)
+    29cc     29cc       b8     4         build/flex/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_frame)
+    2a84     2a84       c8     4         build/flex/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_frame)
+    2b4c     2b4c      308     4         build/flex/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_frame)
+    2e54     2e54      104     4         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_frame)
+    2f58     2f58      124     4         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_frame)
+    307c     307c      100     4         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_frame)
+    317c     317c       68     4         build/flex/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_frame)
+    31e4     31e4       64     4         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_frame)
+    3248     3248       68     4         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.debug_frame)
+    32b0     32b0       64     4         build/flex/obj/sdk/protocol/src/ledger_protocol.o:(.debug_frame)
+    3314     3314      21c     4         build/flex/obj/sdk/qrcode/src/qrcodegen.o:(.debug_frame)
+    3530     3530      238     4         build/flex/obj/sdk/src/cx_hash_iovec.o:(.debug_frame)
+    3768     3768       3c     4         build/flex/obj/sdk/src/cx_wrappers.o:(.debug_frame)
+    37a4     37a4       e0     4         build/flex/obj/sdk/src/ledger_assert.o:(.debug_frame)
+    3884     3884      1ac     4         build/flex/obj/sdk/src/os.o:(.debug_frame)
+    3a30     3a30       a8     4         build/flex/obj/sdk/src/os_printf.o:(.debug_frame)
+    3ad8     3ad8       3c     4         build/flex/obj/sdk/src/pic.o:(.debug_frame)
+    3b14     3b14       e4     4         build/flex/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_frame)
+    3bf8     3bf8     13fc     4         build/flex/obj/sdk/src/syscalls.o:(.debug_frame)
+       0        0     24ea     1 .debug_str
+       0        0     24ea     1         <internal>:(.debug_str)
+       0        0        4     1 ledger.target
+       0        0        4     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.target)
+       0        0        4     1                 target
+       0        0        b     1 ledger.target_name
+       0        0        b     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.target_name)
+       0        0        b     1                 target_name
+       0        0        a     1 ledger.target_id
+       0        0        a     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.target_id)
+       0        0        a     1                 target_id
+       0        0        7     1 ledger.app_name
+       0        0        7     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.app_name)
+       0        0        7     1                 app_name
+       0        0        5     1 ledger.app_version
+       0        0        5     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.app_version)
+       0        0        5     1                 app_version
+       0        0        2     1 ledger.api_level
+       0        0        2     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.api_level)
+       0        0        2     1                 api_level
+       0        0       11     1 ledger.sdk_name
+       0        0       11     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.sdk_name)
+       0        0       11     1                 sdk_name
+       0        0        8     1 ledger.sdk_version
+       0        0        8     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.sdk_version)
+       0        0        8     1                 sdk_version
+       0        0       28     1 ledger.sdk_hash
+       0        0       28     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.sdk_hash)
+       0        0       28     1                 sdk_hash
+       0        0        4     1 ledger.sdk_graphics
+       0        0        4     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.sdk_graphics)
+       0        0        4     1                 sdk_graphics
+       0        0        5     1 ledger.app_flags
+       0        0        5     1         build/flex/obj/sdk/src/app_metadata.o:(ledger.app_flags)
+       0        0        5     1                 app_flags
+d0000010 d0000010        0     1 PROVIDE ( _nvram = ABSOLUTE ( _nvram_start ) )
+d0000010 d0000010        0     1 PROVIDE ( _envram = ABSOLUTE ( _nvram_end ) )
+       0        0       45     1 .ARM.attributes
+       0        0       45     1         build/flex/gen_src/glyphs.o:(.ARM.attributes)
+       0        0      968     1 .debug_str_offsets
+       0        0       1c     1         build/flex/obj/app/src/apdu/dispatcher.o:(.debug_str_offsets)
+      1c       1c       1c     1         build/flex/obj/app/src/app_main.o:(.debug_str_offsets)
+      38       38       1c     1         build/flex/obj/app/src/handler/get_app_name.o:(.debug_str_offsets)
+      54       54       1c     1         build/flex/obj/app/src/handler/get_version.o:(.debug_str_offsets)
+      70       70       14     1         build/flex/obj/app/src/ui/menu_nbgl.o:(.debug_str_offsets)
+      84       84       14     1         build/flex/obj/sdk/io/src/os_io.o:(.debug_str_offsets)
+      98       98       1c     1         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.debug_str_offsets)
+      b4       b4       1c     1         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_str_offsets)
+      d0       d0       1c     1         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.debug_str_offsets)
+      ec       ec       24     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_str_offsets)
+     110      110       7c     1         build/flex/obj/sdk/lib_blewbxx/src/ble_cmd.o:(.debug_str_offsets)
+     18c      18c       70     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o:(.debug_str_offsets)
+     1fc      1fc       40     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger_profile_apdu.o:(.debug_str_offsets)
+     23c      23c       a4     1         build/flex/obj/sdk/lib_lists/lists.o:(.debug_str_offsets)
+     2e0      2e0       80     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.debug_str_offsets)
+     360      360       20     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.debug_str_offsets)
+     380      380       28     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.debug_str_offsets)
+     3a8      3a8      130     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.debug_str_offsets)
+     4d8      4d8       14     1         build/flex/obj/sdk/lib_standard_app/base58.o:(.debug_str_offsets)
+     4ec      4ec       14     1         build/flex/obj/sdk/lib_standard_app/bip32.o:(.debug_str_offsets)
+     500      500       5c     1         build/flex/obj/sdk/lib_standard_app/buffer.o:(.debug_str_offsets)
+     55c      55c       14     1         build/flex/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_str_offsets)
+     570      570       1c     1         build/flex/obj/sdk/lib_standard_app/format.o:(.debug_str_offsets)
+     58c      58c       1c     1         build/flex/obj/sdk/lib_standard_app/io.o:(.debug_str_offsets)
+     5a8      5a8       14     1         build/flex/obj/sdk/lib_standard_app/main.o:(.debug_str_offsets)
+     5bc      5bc       14     1         build/flex/obj/sdk/lib_standard_app/parser.o:(.debug_str_offsets)
+     5d0      5d0       14     1         build/flex/obj/sdk/lib_standard_app/read.o:(.debug_str_offsets)
+     5e4      5e4       1c     1         build/flex/obj/sdk/lib_standard_app/varint.o:(.debug_str_offsets)
+     600      600       14     1         build/flex/obj/sdk/lib_standard_app/write.o:(.debug_str_offsets)
+     614      614       14     1         build/flex/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_str_offsets)
+     628      628       14     1         build/flex/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_str_offsets)
+     63c      63c       48     1         build/flex/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_str_offsets)
+     684      684       14     1         build/flex/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_str_offsets)
+     698      698       14     1         build/flex/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_str_offsets)
+     6ac      6ac       68     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_str_offsets)
+     714      714       14     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_str_offsets)
+     728      728       2c     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_str_offsets)
+     754      754       14     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_str_offsets)
+     768      768       30     1         build/flex/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_str_offsets)
+     798      798       14     1         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_str_offsets)
+     7ac      7ac       24     1         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.debug_str_offsets)
+     7d0      7d0       28     1         build/flex/obj/sdk/protocol/src/ledger_protocol.o:(.debug_str_offsets)
+     7f8      7f8       a8     1         build/flex/obj/sdk/qrcode/src/qrcodegen.o:(.debug_str_offsets)
+     8a0      8a0       14     1         build/flex/obj/sdk/src/cx_hash_iovec.o:(.debug_str_offsets)
+     8b4      8b4       14     1         build/flex/obj/sdk/src/cx_wrappers.o:(.debug_str_offsets)
+     8c8      8c8       14     1         build/flex/obj/sdk/src/ledger_assert.o:(.debug_str_offsets)
+     8dc      8dc       2c     1         build/flex/obj/sdk/src/os.o:(.debug_str_offsets)
+     908      908       24     1         build/flex/obj/sdk/src/os_printf.o:(.debug_str_offsets)
+     92c      92c       14     1         build/flex/obj/sdk/src/pic.o:(.debug_str_offsets)
+     940      940       14     1         build/flex/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_str_offsets)
+     954      954       14     1         build/flex/obj/sdk/src/syscalls.o:(.debug_str_offsets)
+       0        0     11a8     1 .debug_addr
+       0        0       14     1         build/flex/obj/app/src/apdu/dispatcher.o:(.debug_addr)
+      14       14       10     1         build/flex/obj/app/src/app_main.o:(.debug_addr)
+      24       24       10     1         build/flex/obj/app/src/handler/get_app_name.o:(.debug_addr)
+      34       34       10     1         build/flex/obj/app/src/handler/get_version.o:(.debug_addr)
+      44       44       10     1         build/flex/obj/app/src/ui/menu_nbgl.o:(.debug_addr)
+      54       54        c     1         build/flex/obj/sdk/io/src/os_io.o:(.debug_addr)
+      60       60       14     1         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.debug_addr)
+      74       74       64     1         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_addr)
+      d8       d8       18     1         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.debug_addr)
+      f0       f0       44     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_addr)
+     134      134      108     1         build/flex/obj/sdk/lib_blewbxx/src/ble_cmd.o:(.debug_addr)
+     23c      23c      11c     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o:(.debug_addr)
+     358      358       80     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger_profile_apdu.o:(.debug_addr)
+     3d8      3d8       bc     1         build/flex/obj/sdk/lib_lists/lists.o:(.debug_addr)
+     494      494       c4     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.debug_addr)
+     558      558       1c     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.debug_addr)
+     574      574       40     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.debug_addr)
+     5b4      5b4      210     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.debug_addr)
+     7c4      7c4       10     1         build/flex/obj/sdk/lib_standard_app/base58.o:(.debug_addr)
+     7d4      7d4       10     1         build/flex/obj/sdk/lib_standard_app/bip32.o:(.debug_addr)
+     7e4      7e4       80     1         build/flex/obj/sdk/lib_standard_app/buffer.o:(.debug_addr)
+     864      864       20     1         build/flex/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_addr)
+     884      884       20     1         build/flex/obj/sdk/lib_standard_app/format.o:(.debug_addr)
+     8a4      8a4       24     1         build/flex/obj/sdk/lib_standard_app/io.o:(.debug_addr)
+     8c8      8c8       18     1         build/flex/obj/sdk/lib_standard_app/main.o:(.debug_addr)
+     8e0      8e0        c     1         build/flex/obj/sdk/lib_standard_app/parser.o:(.debug_addr)
+     8ec      8ec       20     1         build/flex/obj/sdk/lib_standard_app/read.o:(.debug_addr)
+     90c      90c       18     1         build/flex/obj/sdk/lib_standard_app/varint.o:(.debug_addr)
+     924      924       20     1         build/flex/obj/sdk/lib_standard_app/write.o:(.debug_addr)
+     944      944       40     1         build/flex/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_addr)
+     984      984       58     1         build/flex/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_addr)
+     9dc      9dc       50     1         build/flex/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_addr)
+     a2c      a2c       24     1         build/flex/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_addr)
+     a50      a50       24     1         build/flex/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_addr)
+     a74      a74       b4     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_addr)
+     b28      b28       2c     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_addr)
+     b54      b54       40     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_addr)
+     b94      b94       2c     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_addr)
+     bc0      bc0       20     1         build/flex/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_addr)
+     be0      be0       14     1         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_addr)
+     bf4      bf4       1c     1         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.debug_addr)
+     c10      c10       20     1         build/flex/obj/sdk/protocol/src/ledger_protocol.o:(.debug_addr)
+     c30      c30      124     1         build/flex/obj/sdk/qrcode/src/qrcodegen.o:(.debug_addr)
+     d54      d54       54     1         build/flex/obj/sdk/src/cx_hash_iovec.o:(.debug_addr)
+     da8      da8        c     1         build/flex/obj/sdk/src/cx_wrappers.o:(.debug_addr)
+     db4      db4       28     1         build/flex/obj/sdk/src/ledger_assert.o:(.debug_addr)
+     ddc      ddc       5c     1         build/flex/obj/sdk/src/os.o:(.debug_addr)
+     e38      e38       58     1         build/flex/obj/sdk/src/os_printf.o:(.debug_addr)
+     e90      e90       10     1         build/flex/obj/sdk/src/pic.o:(.debug_addr)
+     ea0      ea0       28     1         build/flex/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_addr)
+     ec8      ec8      2e0     1         build/flex/obj/sdk/src/syscalls.o:(.debug_addr)
+       0        0      9a6     1 .debug_line_str
+       0        0      9a6     1         <internal>:(.debug_line_str)
+       0        0     1dca     1 .debug_rnglists
+       0        0       17     1         build/flex/obj/app/src/ui/menu_nbgl.o:(.debug_rnglists)
+      17       17       18     1         build/flex/obj/sdk/io/src/os_io_default_apdu.o:(.debug_rnglists)
+      2f       2f       63     1         build/flex/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_rnglists)
+      92       92       2b     1         build/flex/obj/sdk/io/src/os_io_seph_ux.o:(.debug_rnglists)
+      bd       bd       5f     1         build/flex/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_rnglists)
+     11c      11c      194     1         build/flex/obj/sdk/lib_blewbxx/src/ble_cmd.o:(.debug_rnglists)
+     2b0      2b0      212     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o:(.debug_rnglists)
+     4c2      4c2       66     1         build/flex/obj/sdk/lib_blewbxx/src/ble_ledger_profile_apdu.o:(.debug_rnglists)
+     528      528       e5     1         build/flex/obj/sdk/lib_lists/lists.o:(.debug_rnglists)
+     60d      60d      469     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout.o:(.debug_rnglists)
+     a76      a76       40     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_layout_navigation.o:(.debug_rnglists)
+     ab6      ab6       3b     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_page.o:(.debug_rnglists)
+     af1      af1      3e3     1         build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o:(.debug_rnglists)
+     ed4      ed4       19     1         build/flex/obj/sdk/lib_standard_app/base58.o:(.debug_rnglists)
+     eed      eed       18     1         build/flex/obj/sdk/lib_standard_app/bip32.o:(.debug_rnglists)
+     f05      f05       f6     1         build/flex/obj/sdk/lib_standard_app/buffer.o:(.debug_rnglists)
+     ffb      ffb       27     1         build/flex/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_rnglists)
+    1022     1022       22     1         build/flex/obj/sdk/lib_standard_app/format.o:(.debug_rnglists)
+    1044     1044       24     1         build/flex/obj/sdk/lib_standard_app/io.o:(.debug_rnglists)
+    1068     1068       1d     1         build/flex/obj/sdk/lib_standard_app/main.o:(.debug_rnglists)
+    1085     1085       23     1         build/flex/obj/sdk/lib_standard_app/read.o:(.debug_rnglists)
+    10a8     10a8       1a     1         build/flex/obj/sdk/lib_standard_app/varint.o:(.debug_rnglists)
+    10c2     10c2       23     1         build/flex/obj/sdk/lib_standard_app/write.o:(.debug_rnglists)
+    10e5     10e5       3c     1         build/flex/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_rnglists)
+    1121     1121       4e     1         build/flex/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_rnglists)
+    116f     116f       7a     1         build/flex/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_rnglists)
+    11e9     11e9       27     1         build/flex/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_rnglists)
+    1210     1210       26     1         build/flex/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_rnglists)
+    1236     1236       d2     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_rnglists)
+    1308     1308       2e     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_rnglists)
+    1336     1336       78     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_rnglists)
+    13ae     13ae       2e     1         build/flex/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_rnglists)
+    13dc     13dc       3d     1         build/flex/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_rnglists)
+    1419     1419       1a     1         build/flex/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_rnglists)
+    1433     1433       29     1         build/flex/obj/sdk/lib_ux_nbgl/ux.o:(.debug_rnglists)
+    145c     145c       5f     1         build/flex/obj/sdk/protocol/src/ledger_protocol.o:(.debug_rnglists)
+    14bb     14bb      533     1         build/flex/obj/sdk/qrcode/src/qrcodegen.o:(.debug_rnglists)
+    19ee     19ee       4c     1         build/flex/obj/sdk/src/cx_hash_iovec.o:(.debug_rnglists)
+    1a3a     1a3a       29     1         build/flex/obj/sdk/src/ledger_assert.o:(.debug_rnglists)
+    1a63     1a63       48     1         build/flex/obj/sdk/src/os.o:(.debug_rnglists)
+    1aab     1aab       76     1         build/flex/obj/sdk/src/os_printf.o:(.debug_rnglists)
+    1b21     1b21       17     1         build/flex/obj/sdk/src/pic.o:(.debug_rnglists)
+    1b38     1b38       29     1         build/flex/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_rnglists)
+    1b61     1b61      269     1         build/flex/obj/sdk/src/syscalls.o:(.debug_rnglists)
+       0        0     2120     4 .symtab
+       0        0     2120     4         <internal>:(.symtab)
+       0        0      186     1 .shstrtab
+       0        0      186     1         <internal>:(.shstrtab)
+       0        0     1bc3     1 .strtab
+       0        0     1bc3     1         <internal>:(.strtab)

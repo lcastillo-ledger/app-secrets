@@ -1,0 +1,939 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        0     1 PAGE_SIZE = 512
+       0        0        0     1 STACK_MIN_SIZE = DEFINED ( stack_min_size ) ? stack_min_size : 1500
+       0        0        0     1 END_STACK = ORIGIN ( SRAM ) + LENGTH ( SRAM )
+c0de0000 c0de0000     4843     4 .text
+c0de0000 c0de0000        0     1         _text = .
+c0de0000 c0de0000        0     1         _nvram_start = .
+c0de0000 c0de0000       16     2         build/nanos2/obj/sdk/lib_standard_app/main.o:(.boot)
+c0de0000 c0de0000        0     1                 $t.3
+c0de0001 c0de0001       16     1                 main
+c0de0016 c0de0016        0     1         _code = .
+c0de0016 c0de0016       de     2         build/nanos2/obj/app/src/apdu/dispatcher.o:(.text.apdu_dispatcher)
+c0de0016 c0de0016        0     1                 $t.0
+c0de0017 c0de0017       de     1                 apdu_dispatcher
+c0de00f4 c0de00f4       c8     4         build/nanos2/obj/app/src/app_main.o:(.text.app_main)
+c0de00f4 c0de00f4        0     1                 $t.0
+c0de00f5 c0de00f5       c8     1                 app_main
+c0de01bc c0de01bc       2c     2         build/nanos2/obj/app/src/handler/get_app_name.o:(.text.handler_get_app_name)
+c0de01bc c0de01bc        0     1                 $t.0
+c0de01bd c0de01bd       2c     1                 handler_get_app_name
+c0de01e8 c0de01e8       32     2         build/nanos2/obj/app/src/handler/get_version.o:(.text.handler_get_version)
+c0de01e8 c0de01e8        0     1                 $t.0
+c0de01e9 c0de01e9       32     1                 handler_get_version
+c0de021a c0de021a       4e     2         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.text.ui_menu_main)
+c0de021a c0de021a        0     1                 $t.0
+c0de021b c0de021b       4e     1                 ui_menu_main
+c0de0268 c0de0268        6     2         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.text.app_quit)
+c0de0268 c0de0268        0     1                 $t.1
+c0de0269 c0de0269        6     1                 app_quit
+c0de026e c0de026e       a2     2         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.text.os_io_handle_default_apdu)
+c0de026e c0de026e        0     1                 $t.0
+c0de026f c0de026f       a2     1                 os_io_handle_default_apdu
+c0de0310 c0de0310       70     2         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.text.get_version)
+c0de0310 c0de0310        0     1                 $t.1
+c0de0311 c0de0311       70     1                 get_version
+c0de0380 c0de0380       40     2         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.text.os_io_seph_cmd_printf)
+c0de0380 c0de0380        0     1                 $t.11
+c0de0381 c0de0381       40     1                 os_io_seph_cmd_printf
+c0de03c0 c0de03c0       1e     2         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.text.io_process_itc_ux_event)
+c0de03c0 c0de03c0        0     1                 $t.1
+c0de03c1 c0de03c1       1e     1                 io_process_itc_ux_event
+c0de03de c0de03de       ac     2         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_seproxyhal_io_heartbeat)
+c0de03de c0de03de        0     1                 $t.3
+c0de03df c0de03df       ac     1                 io_seproxyhal_io_heartbeat
+c0de048a c0de048a       3c     2         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_legacy_apdu_tx)
+c0de048a c0de048a        0     1                 $t.9
+c0de048b c0de048b       3c     1                 io_legacy_apdu_tx
+c0de04c6 c0de04c6      280     2         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_legacy_apdu_rx)
+c0de04c6 c0de04c6        0     1                 $t.10
+c0de04c7 c0de04c7      280     1                 io_legacy_apdu_rx
+c0de0746 c0de0746       4a     2         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.text.io_seproxyhal_init)
+c0de0746 c0de0746        0     1                 $t.11
+c0de0747 c0de0747       4a     1                 io_seproxyhal_init
+c0de0790 c0de0790       92     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutGet)
+c0de0790 c0de0790        0     1                 $t.1
+c0de0791 c0de0791       92     1                 nbgl_layoutGet
+c0de0824 c0de0824       50     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.buttonCallback)
+c0de0824 c0de0824        0     1                 $t.2
+c0de0825 c0de0825       50     1                 buttonCallback
+c0de0874 c0de0874       c0     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutAddNavigation)
+c0de0874 c0de0874        0     1                 $t.3
+c0de0875 c0de0875       c0     1                 nbgl_layoutAddNavigation
+c0de0934 c0de0934      4aa     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutAddText)
+c0de0934 c0de0934        0     1                 $t.4
+c0de0935 c0de0935      4aa     1                 nbgl_layoutAddText
+c0de0de0 c0de0de0       ce     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutAddMenuList)
+c0de0de0 c0de0de0        0     1                 $t.5
+c0de0de1 c0de0de1       ce     1                 nbgl_layoutAddMenuList
+c0de0eae c0de0eae      3a6     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutAddCenteredInfo)
+c0de0eae c0de0eae        0     1                 $t.6
+c0de0eaf c0de0eaf      3a6     1                 nbgl_layoutAddCenteredInfo
+c0de1254 c0de1254      1f8     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutAddSwitch)
+c0de1254 c0de1254        0     1                 $t.9
+c0de1255 c0de1255      1f8     1                 nbgl_layoutAddSwitch
+c0de144c c0de144c       14     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutDraw)
+c0de144c c0de144c        0     1                 $t.10
+c0de144d c0de144d       14     1                 nbgl_layoutDraw
+c0de1460 c0de1460       1e     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.text.nbgl_layoutRelease)
+c0de1460 c0de1460        0     1                 $t.11
+c0de1461 c0de1461       1e     1                 nbgl_layoutRelease
+c0de1480 c0de1480       fa     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.nbgl_stepDrawText)
+c0de1480 c0de1480        0     1                 $t.0
+c0de1481 c0de1481       fa     1                 nbgl_stepDrawText
+c0de157c c0de157c      20c     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.displayTextPage)
+c0de157c c0de157c        0     1                 $t.1
+c0de157d c0de157d      20c     1                 displayTextPage
+c0de1788 c0de1788      16a     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.nbgl_stepDrawCenteredInfo)
+c0de1788 c0de1788        0     1                 $t.2
+c0de1789 c0de1789      16a     1                 nbgl_stepDrawCenteredInfo
+c0de18f4 c0de18f4       7e     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.actionCallback)
+c0de18f4 c0de18f4        0     1                 $t.3
+c0de18f5 c0de18f5       7e     1                 actionCallback
+c0de1974 c0de1974       c2     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.nbgl_stepDrawMenuList)
+c0de1974 c0de1974        0     1                 $t.4
+c0de1975 c0de1975       c2     1                 nbgl_stepDrawMenuList
+c0de1a36 c0de1a36       76     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.displayMenuList)
+c0de1a36 c0de1a36        0     1                 $t.5
+c0de1a37 c0de1a37       76     1                 displayMenuList
+c0de1aac c0de1aac      16a     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.nbgl_stepDrawSwitch)
+c0de1aac c0de1aac        0     1                 $t.7
+c0de1aad c0de1aad      16a     1                 nbgl_stepDrawSwitch
+c0de1c16 c0de1c16       1a     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.nbgl_stepRelease)
+c0de1c16 c0de1c16        0     1                 $t.8
+c0de1c17 c0de1c17       1a     1                 nbgl_stepRelease
+c0de1c30 c0de1c30       62     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.text.menuListActionCallback)
+c0de1c30 c0de1c30        0     1                 $t.9
+c0de1c31 c0de1c31       62     1                 menuListActionCallback
+c0de1c92 c0de1c92       ce     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.nbgl_useCaseHomeAndSettings)
+c0de1c92 c0de1c92        0     1                 $t.9
+c0de1c93 c0de1c93       ce     1                 nbgl_useCaseHomeAndSettings
+c0de1d60 c0de1d60       b4     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.startUseCaseSettingsAtPage)
+c0de1d60 c0de1d60        0     1                 $t.10
+c0de1d61 c0de1d61       b4     1                 startUseCaseSettingsAtPage
+c0de1e14 c0de1e14       8e     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.startUseCaseHome)
+c0de1e14 c0de1e14        0     1                 $t.11
+c0de1e15 c0de1e15       8e     1                 startUseCaseHome
+c0de1ea2 c0de1ea2      184     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.drawStep)
+c0de1ea2 c0de1ea2        0     1                 $t.22
+c0de1ea3 c0de1ea3      184     1                 drawStep
+c0de2026 c0de2026       62     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.nbgl_useCaseChoice)
+c0de2026 c0de2026        0     1                 $t.33
+c0de2027 c0de2027       62     1                 nbgl_useCaseChoice
+c0de2088 c0de2088       fa     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.displayChoicePage)
+c0de2088 c0de2088        0     1                 $t.35
+c0de2089 c0de2089       fa     1                 displayChoicePage
+c0de2182 c0de2182       e4     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.getContentAtIdx)
+c0de2182 c0de2182        0     1                 $t.39
+c0de2183 c0de2183       e4     1                 getContentAtIdx
+c0de2266 c0de2266      116     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.displayContent)
+c0de2266 c0de2266        0     1                 $t.40
+c0de2267 c0de2267      116     1                 displayContent
+c0de237c c0de237c      1a2     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.getContentPage)
+c0de237c c0de237c        0     1                 $t.41
+c0de237d c0de237d      1a2     1                 getContentPage
+c0de251e c0de251e       1e     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.contentCallback)
+c0de251e c0de251e        0     1                 $t.42
+c0de251f c0de251f       1e     1                 contentCallback
+c0de253c c0de253c       d4     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.getContentElemAtIdx)
+c0de253c c0de253c        0     1                 $t.43
+c0de253d c0de253d       d4     1                 getContentElemAtIdx
+c0de2610 c0de2610       ae     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.onSwitchAction)
+c0de2610 c0de2610        0     1                 $t.44
+c0de2611 c0de2611       ae     1                 onSwitchAction
+c0de26be c0de26be       f2     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.displaySettingsPage)
+c0de26be c0de26be        0     1                 $t.45
+c0de26bf c0de26bf       f2     1                 displaySettingsPage
+c0de27b0 c0de27b0       1e     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.settingsCallback)
+c0de27b0 c0de27b0        0     1                 $t.46
+c0de27b1 c0de27b1       1e     1                 settingsCallback
+c0de27ce c0de27ce      150     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.buttonGenericCallback)
+c0de27ce c0de27ce        0     1                 $t.47
+c0de27cf c0de27cf      150     1                 buttonGenericCallback
+c0de291e c0de291e      120     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.displayHomePage)
+c0de291e c0de291e        0     1                 $t.48
+c0de291f c0de291f      120     1                 displayHomePage
+c0de2a3e c0de2a3e        a     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.startUseCaseSettings)
+c0de2a3e c0de2a3e        0     1                 $t.49
+c0de2a3f c0de2a3f        a     1                 startUseCaseSettings
+c0de2a48 c0de2a48       28     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.startUseCaseInfo)
+c0de2a48 c0de2a48        0     1                 $t.50
+c0de2a49 c0de2a49       28     1                 startUseCaseInfo
+c0de2a70 c0de2a70       1c     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.homeCallback)
+c0de2a70 c0de2a70        0     1                 $t.51
+c0de2a71 c0de2a71       1c     1                 homeCallback
+c0de2a8c c0de2a8c       9c     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.displayInfoPage)
+c0de2a8c c0de2a8c        0     1                 $t.52
+c0de2a8d c0de2a8d       9c     1                 displayInfoPage
+c0de2b28 c0de2b28       1c     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.infoCallback)
+c0de2b28 c0de2b28        0     1                 $t.53
+c0de2b29 c0de2b29       1c     1                 infoCallback
+c0de2b44 c0de2b44       16     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.statusTickerCallback)
+c0de2b44 c0de2b44        0     1                 $t.65
+c0de2b45 c0de2b45       16     1                 statusTickerCallback
+c0de2b5a c0de2b5a       76     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.getChoiceName)
+c0de2b5a c0de2b5a        0     1                 $t.66
+c0de2b5b c0de2b5b       76     1                 getChoiceName
+c0de2bd0 c0de2bd0       82     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.onChoiceSelected)
+c0de2bd0 c0de2bd0        0     1                 $t.67
+c0de2bd1 c0de2bd1       82     1                 onChoiceSelected
+c0de2c52 c0de2c52       1a     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.onChoiceAccept)
+c0de2c52 c0de2c52        0     1                 $t.69
+c0de2c53 c0de2c53       1a     1                 onChoiceAccept
+c0de2c6c c0de2c6c       1a     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.onChoiceReject)
+c0de2c6c c0de2c6c        0     1                 $t.70
+c0de2c6d c0de2c6d       1a     1                 onChoiceReject
+c0de2c86 c0de2c86       1c     2         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.text.genericChoiceCallback)
+c0de2c86 c0de2c86        0     1                 $t.71
+c0de2c87 c0de2c87       1c     1                 genericChoiceCallback
+c0de2ca2 c0de2ca2       26     2         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.text.buffer_copy)
+c0de2ca2 c0de2ca2        0     1                 $t.10
+c0de2ca3 c0de2ca3       26     1                 buffer_copy
+c0de2cc8 c0de2cc8        2     2         build/nanos2/obj/sdk/lib_standard_app/io.o:(.text.app_ticker_event_callback)
+c0de2cc8 c0de2cc8        0     1                 $t.0
+c0de2cc9 c0de2cc9        2     1                 app_ticker_event_callback
+c0de2cca c0de2cca       34     2         build/nanos2/obj/sdk/lib_standard_app/io.o:(.text.io_event)
+c0de2cca c0de2cca        0     1                 $t.1
+c0de2ccb c0de2ccb       34     1                 io_event
+c0de2cfe c0de2cfe       10     2         build/nanos2/obj/sdk/lib_standard_app/io.o:(.text.io_init)
+c0de2cfe c0de2cfe        0     1                 $t.2
+c0de2cff c0de2cff       10     1                 io_init
+c0de2d10 c0de2d10       28     4         build/nanos2/obj/sdk/lib_standard_app/io.o:(.text.io_recv_command)
+c0de2d10 c0de2d10        0     1                 $t.3
+c0de2d11 c0de2d11       28     1                 io_recv_command
+c0de2d38 c0de2d38       fc     4         build/nanos2/obj/sdk/lib_standard_app/io.o:(.text.io_send_response_buffers)
+c0de2d38 c0de2d38        0     1                 $t.4
+c0de2d39 c0de2d39       fc     1                 io_send_response_buffers
+c0de2e34 c0de2e34        6     2         build/nanos2/obj/sdk/lib_standard_app/main.o:(.text.app_exit)
+c0de2e34 c0de2e34        0     1                 $t.0
+c0de2e35 c0de2e35        6     1                 app_exit
+c0de2e3a c0de2e3a        c     2         build/nanos2/obj/sdk/lib_standard_app/main.o:(.text.common_app_init)
+c0de2e3a c0de2e3a        0     1                 $t.1
+c0de2e3b c0de2e3b        c     1                 common_app_init
+c0de2e46 c0de2e46       62     2         build/nanos2/obj/sdk/lib_standard_app/main.o:(.text.standalone_app_main)
+c0de2e46 c0de2e46        0     1                 $t.2
+c0de2e47 c0de2e47       62     1                 standalone_app_main
+c0de2ea8 c0de2ea8       38     2         build/nanos2/obj/sdk/lib_standard_app/parser.o:(.text.apdu_parser)
+c0de2ea8 c0de2ea8        0     1                 $t.0
+c0de2ea9 c0de2ea9       38     1                 apdu_parser
+c0de2ee0 c0de2ee0        e     2         build/nanos2/obj/sdk/lib_standard_app/write.o:(.text.write_u16_be)
+c0de2ee0 c0de2ee0        0     1                 $t.0
+c0de2ee1 c0de2ee1        e     1                 write_u16_be
+c0de2eee c0de2eee       7a     2         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.text.ux_process_button_event)
+c0de2eee c0de2eee        0     1                 $t.0
+c0de2eef c0de2eef       7a     1                 ux_process_button_event
+c0de2f68 c0de2f68       78     2         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.text.ux_process_ticker_event)
+c0de2f68 c0de2f68        0     1                 $t.1
+c0de2f69 c0de2f69       78     1                 ux_process_ticker_event
+c0de2fe0 c0de2fe0       3c     2         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.text.ux_process_default_event)
+c0de2fe0 c0de2fe0        0     1                 $t.2
+c0de2fe1 c0de2fe1       3c     1                 ux_process_default_event
+c0de301c c0de301c       44     2         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.assert_display_lr_and_pc)
+c0de301c c0de301c        0     1                 $t.0
+c0de301d c0de301d       44     1                 assert_display_lr_and_pc
+c0de3060 c0de3060       34     2         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.assert_print_lr_and_pc)
+c0de3060 c0de3060        0     1                 $t.1
+c0de3061 c0de3061       34     1                 assert_print_lr_and_pc
+c0de3094 c0de3094       38     2         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.assert_display_file_info)
+c0de3094 c0de3094        0     1                 $t.2
+c0de3095 c0de3095       38     1                 assert_display_file_info
+c0de30cc c0de30cc       16     2         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.assert_print_file_info)
+c0de30cc c0de30cc        0     1                 $t.3
+c0de30cd c0de30cd       16     1                 assert_print_file_info
+c0de30e2 c0de30e2       30     2         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.throw_display_lr)
+c0de30e2 c0de30e2        0     1                 $t.4
+c0de30e3 c0de30e3       30     1                 throw_display_lr
+c0de3112 c0de3112       1e     2         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.throw_print_lr)
+c0de3112 c0de3112        0     1                 $t.5
+c0de3113 c0de3113       1e     1                 throw_print_lr
+c0de3130 c0de3130        6     2         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.assert_exit)
+c0de3130 c0de3130        0     1                 $t.6
+c0de3131 c0de3131        6     1                 assert_exit
+c0de3138 c0de3138       46     4         build/nanos2/obj/sdk/src/ledger_assert.o:(.text.assert_display_exit)
+c0de3138 c0de3138        0     1                 $t.7
+c0de3139 c0de3139       46     1                 assert_display_exit
+c0de317e c0de317e        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_refresh)
+c0de317e c0de317e        0     1                 $t.0
+c0de317f c0de317f        0     1                 nbgl_refresh
+c0de3188 c0de3188        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_objInit)
+c0de3188 c0de3188        0     1                 $t.5
+c0de3189 c0de3189        0     1                 nbgl_objInit
+c0de3192 c0de3192        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_objAllowDrawing)
+c0de3192 c0de3192        0     1                 $t.7
+c0de3193 c0de3193        0     1                 nbgl_objAllowDrawing
+c0de319c c0de319c        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenSet)
+c0de319c c0de319c        0     1                 $t.10
+c0de319d c0de319d        0     1                 nbgl_screenSet
+c0de31a6 c0de31a6        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenPush)
+c0de31a6 c0de31a6        0     1                 $t.11
+c0de31a7 c0de31a7        0     1                 nbgl_screenPush
+c0de31b0 c0de31b0        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenRedraw)
+c0de31b0 c0de31b0        0     1                 $t.12
+c0de31b1 c0de31b1        0     1                 nbgl_screenRedraw
+c0de31ba c0de31ba        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenPop)
+c0de31ba c0de31ba        0     1                 $t.13
+c0de31bb c0de31bb        0     1                 nbgl_screenPop
+c0de31c4 c0de31c4        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_screenHandler)
+c0de31c4 c0de31c4        0     1                 $t.22
+c0de31c5 c0de31c5        0     1                 nbgl_screenHandler
+c0de31ce c0de31ce        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_objPoolGet)
+c0de31ce c0de31ce        0     1                 $t.23
+c0de31cf c0de31cf        0     1                 nbgl_objPoolGet
+c0de31d8 c0de31d8        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_containerPoolGet)
+c0de31d8 c0de31d8        0     1                 $t.25
+c0de31d9 c0de31d9        0     1                 nbgl_containerPoolGet
+c0de31e2 c0de31e2        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getFont)
+c0de31e2 c0de31e2        0     1                 $t.27
+c0de31e3 c0de31e3        0     1                 nbgl_getFont
+c0de31ec c0de31ec        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getFontLineHeight)
+c0de31ec c0de31ec        0     1                 $t.29
+c0de31ed c0de31ed        0     1                 nbgl_getFontLineHeight
+c0de31f6 c0de31f6        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextMaxLenAndWidth)
+c0de31f6 c0de31f6        0     1                 $t.34
+c0de31f7 c0de31f7        0     1                 nbgl_getTextMaxLenAndWidth
+c0de3200 c0de3200        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextNbLinesInWidth)
+c0de3200 c0de3200        0     1                 $t.35
+c0de3201 c0de3201        0     1                 nbgl_getTextNbLinesInWidth
+c0de320a c0de320a        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextNbPagesInWidth)
+c0de320a c0de320a        0     1                 $t.36
+c0de320b c0de320b        0     1                 nbgl_getTextNbPagesInWidth
+c0de3214 c0de3214        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextWidth)
+c0de3214 c0de3214        0     1                 $t.37
+c0de3215 c0de3215        0     1                 nbgl_getTextWidth
+c0de321e c0de321e        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_getTextMaxLenInNbLines)
+c0de321e c0de321e        0     1                 $t.38
+c0de321f c0de321f        0     1                 nbgl_getTextMaxLenInNbLines
+c0de3228 c0de3228        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_textReduceOnNbLines)
+c0de3228 c0de3228        0     1                 $t.39
+c0de3229 c0de3229        0     1                 nbgl_textReduceOnNbLines
+c0de3232 c0de3232        a     1         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.nbgl_buttonsHandler)
+c0de3232 c0de3232        0     1                 $t.45
+c0de3233 c0de3233        0     1                 nbgl_buttonsHandler
+c0de323c c0de323c       10     4         build/nanos2/obj/sdk/src/nbgl_stubs.o:(.text.pic_init)
+c0de323c c0de323c        0     1                 $t.51
+c0de323d c0de323d        0     1                 pic_init
+c0de3245 c0de3245        0     1                 nbgl_trampoline_helper
+c0de3248 c0de3248        0     1                 $d.52
+c0de324c c0de324c        a     2         build/nanos2/obj/sdk/src/os.o:(.text.os_boot)
+c0de324c c0de324c        0     1                 $t.0
+c0de324d c0de324d        a     1                 os_boot
+c0de3256 c0de3256       1c     2         build/nanos2/obj/sdk/src/os.o:(.text.os_longjmp)
+c0de3256 c0de3256        0     1                 $t.3
+c0de3257 c0de3257       1c     1                 os_longjmp
+c0de3272 c0de3272       16     2         build/nanos2/obj/sdk/src/os.o:(.text.compute_address_location)
+c0de3272 c0de3272        0     1                 $t.5
+c0de3273 c0de3273       16     1                 compute_address_location
+c0de3288 c0de3288      60c     4         build/nanos2/obj/sdk/src/os_printf.o:(.text.mcu_usb_printf)
+c0de3288 c0de3288        0     1                 $t.0
+c0de3289 c0de3289      60c     1                 mcu_usb_printf
+c0de3289 c0de3289      60c     1                 screen_printf
+c0de3894 c0de3894      688     4         build/nanos2/obj/sdk/src/os_printf.o:(.text.vformat_internal)
+c0de3894 c0de3894        0     1                 $t.1
+c0de3895 c0de3895      688     1                 vformat_internal
+c0de3f1c c0de3f1c       58     2         build/nanos2/obj/sdk/src/os_printf.o:(.text.snprintf)
+c0de3f1c c0de3f1c        0     1                 $t.2
+c0de3f1d c0de3f1d       58     1                 snprintf
+c0de3f74 c0de3f74       32     2         build/nanos2/obj/sdk/src/os_printf.o:(.text.sprintf_output)
+c0de3f74 c0de3f74        0     1                 $t.3
+c0de3f75 c0de3f75       32     1                 sprintf_output
+c0de3fa8 c0de3fa8       3c     4         build/nanos2/obj/sdk/src/pic.o:(.text.pic)
+c0de3fa8 c0de3fa8        0     1                 $t.0
+c0de3fa9 c0de3fa9       2c     1                 pic
+c0de3fd4 c0de3fd4        0     1                 $d.2
+c0de3fe4 c0de3fe4       10     4         build/nanos2/obj/sdk/src/pic.o:(.text.pic_internal)
+c0de3fe4 c0de3fe4        0     1                 $t.1
+c0de3fe5 c0de3fe5        c     1                 pic_internal
+c0de3ff0 c0de3ff0        0     1                 $d.3
+c0de3ff4 c0de3ff4        e     4         build/nanos2/obj/sdk/src/svc_call.o:(.text)
+c0de3ff4 c0de3ff4        0     1                 $t.0
+c0de3ff5 c0de3ff5        0     1                 SVC_Call
+c0de3ffc c0de3ffc        0     1                 exception
+c0de4002 c0de4002       20     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_pki_load_certificate)
+c0de4002 c0de4002        0     1                 $t.112
+c0de4003 c0de4003       20     1                 os_pki_load_certificate
+c0de4022 c0de4022       16     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_perso_is_pin_set)
+c0de4022 c0de4022        0     1                 $t.125
+c0de4023 c0de4023       16     1                 os_perso_is_pin_set
+c0de4038 c0de4038       16     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_global_pin_is_validated)
+c0de4038 c0de4038        0     1                 $t.126
+c0de4039 c0de4039       16     1                 os_global_pin_is_validated
+c0de404e c0de404e       1a     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_ux)
+c0de404e c0de404e        0     1                 $t.132
+c0de404f c0de404f       1a     1                 os_ux
+c0de4068 c0de4068       14     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_flags)
+c0de4068 c0de4068        0     1                 $t.137
+c0de4069 c0de4069       14     1                 os_flags
+c0de407c c0de407c       18     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_registry_get_current_app_tag)
+c0de407c c0de407c        0     1                 $t.148
+c0de407d c0de407d       18     1                 os_registry_get_current_app_tag
+c0de4094 c0de4094       16     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_sched_exit)
+c0de4094 c0de4094        0     1                 $t.152
+c0de4095 c0de4095       16     1                 os_sched_exit
+c0de40aa c0de40aa       16     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_io_init)
+c0de40aa c0de40aa        0     1                 $t.158
+c0de40ab c0de40ab       16     1                 os_io_init
+c0de40c0 c0de40c0       18     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_io_start)
+c0de40c0 c0de40c0        0     1                 $t.159
+c0de40c1 c0de40c1       18     1                 os_io_start
+c0de40d8 c0de40d8       18     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_io_stop)
+c0de40d8 c0de40d8        0     1                 $t.160
+c0de40d9 c0de40d9       18     1                 os_io_stop
+c0de40f0 c0de40f0       18     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_io_tx_cmd)
+c0de40f0 c0de40f0        0     1                 $t.161
+c0de40f1 c0de40f1       18     1                 os_io_tx_cmd
+c0de4108 c0de4108       18     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_io_rx_evt)
+c0de4108 c0de4108        0     1                 $t.162
+c0de4109 c0de4109       18     1                 os_io_rx_evt
+c0de4120 c0de4120       14     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.try_context_get)
+c0de4120 c0de4120        0     1                 $t.165
+c0de4121 c0de4121       14     1                 try_context_get
+c0de4134 c0de4134       1c     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.try_context_set)
+c0de4134 c0de4134        0     1                 $t.166
+c0de4135 c0de4135       1c     1                 try_context_set
+c0de4150 c0de4150       1c     2         build/nanos2/obj/sdk/src/syscalls.o:(.text.os_sched_last_status)
+c0de4150 c0de4150        0     1                 $t.167
+c0de4151 c0de4151       1c     1                 os_sched_last_status
+c0de416c c0de416c      1c6     4         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(udivmoddi4.c.o):(.text)
+c0de416c c0de416c        0     1                 $t.0
+c0de416d c0de416d      1c6     1                 __udivmoddi4
+c0de4334 c0de4334        4     4         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_memcpy.S.o):(.text)
+c0de4334 c0de4334        0     1                 $t.0
+c0de4335 c0de4335        4     1                 __aeabi_memcpy
+c0de4335 c0de4335        4     1                 __aeabi_memcpy4
+c0de4335 c0de4335        4     1                 __aeabi_memcpy8
+c0de4338 c0de4338        4     4         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_memmove.S.o):(.text)
+c0de4338 c0de4338        0     1                 $t.0
+c0de4339 c0de4339        4     1                 __aeabi_memmove
+c0de4339 c0de4339        4     1                 __aeabi_memmove4
+c0de4339 c0de4339        4     1                 __aeabi_memmove8
+c0de433c c0de433c       14     4         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_memset.S.o):(.text)
+c0de433c c0de433c        0     1                 $t.0
+c0de433d c0de433d        a     1                 __aeabi_memset
+c0de433d c0de433d        a     1                 __aeabi_memset4
+c0de433d c0de433d        a     1                 __aeabi_memset8
+c0de4349 c0de4349        8     1                 __aeabi_memclr
+c0de4349 c0de4349        8     1                 __aeabi_memclr4
+c0de4349 c0de4349        8     1                 __aeabi_memclr8
+c0de4350 c0de4350       14     4         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libclang_rt.builtins.a(aeabi_uldivmod.S.o):(.text)
+c0de4350 c0de4350        0     1                 $t.0
+c0de4351 c0de4351       14     1                 __aeabi_uldivmod
+c0de4364 c0de4364        4     2         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-explicit_bzero.o):(.text.explicit_bzero)
+c0de4364 c0de4364        0     1                 $t
+c0de4365 c0de4365        4     1                 explicit_bzero
+c0de4368 c0de4368        8     2         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-bzero.o):(.text.bzero)
+c0de4368 c0de4368        0     1                 $t
+c0de4369 c0de4369        8     1                 bzero
+c0de4370 c0de4370       1c     2         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-memcpy-stub.o):(.text.memcpy)
+c0de4370 c0de4370        0     1                 $t
+c0de4371 c0de4371       1c     1                 memcpy
+c0de438c c0de438c       34     2         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-memmove.o):(.text.memmove)
+c0de438c c0de438c        0     1                 $t
+c0de438d c0de438d       34     1                 memmove
+c0de43c0 c0de43c0       10     2         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-memset.o):(.text.memset)
+c0de43c0 c0de43c0        0     1                 $t
+c0de43c1 c0de43c1       10     1                 memset
+c0de43d0 c0de43d0       1c     4         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-setjmp.o):(.text)
+c0de43d0 c0de43d0        0     1                 $t
+c0de43d1 c0de43d1        c     1                 setjmp
+c0de43dd c0de43dd        e     1                 longjmp
+c0de43ec c0de43ec       10     2         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-strlen.o):(.text)
+c0de43ec c0de43ec        0     1                 $t
+c0de43ed c0de43ed       10     1                 strlen
+c0de43fc c0de43fc       2a     2         /opt/nanosplus-secure-sdk/arch/st33k1/lib/libc.a(lib_a-strncat.o):(.text.strncat)
+c0de43fc c0de43fc        0     1                 $t
+c0de43fd c0de43fd       2a     1                 strncat
+c0de4426 c0de4426        0     1         _ecode = .
+c0de4426 c0de4426       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Information_circle_14px_bitmap)
+c0de4426 c0de4426       19     1                 C_Information_circle_14px_bitmap
+c0de443f c0de443f        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Information_circle_14px)
+c0de443f c0de443f        a     1                 C_Information_circle_14px
+c0de4449 c0de4449       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Quit_14px_bitmap)
+c0de4449 c0de4449       19     1                 C_Quit_14px_bitmap
+c0de4462 c0de4462        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Quit_14px)
+c0de4462 c0de4462        a     1                 C_Quit_14px
+c0de446c c0de446c        c     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_Off_8px_bitmap)
+c0de446c c0de446c        c     1                 C_Switch_Off_8px_bitmap
+c0de4478 c0de4478        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_Off_8px)
+c0de4478 c0de4478        a     1                 C_Switch_Off_8px
+c0de4482 c0de4482        c     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_On_8px_bitmap)
+c0de4482 c0de4482        c     1                 C_Switch_On_8px_bitmap
+c0de448e c0de448e        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_On_8px)
+c0de448e c0de448e        a     1                 C_Switch_On_8px
+c0de4498 c0de4498       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_back_x_bitmap)
+c0de4498 c0de4498       19     1                 C_icon_back_x_bitmap
+c0de44b1 c0de44b1        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_back_x)
+c0de44b1 c0de44b1        a     1                 C_icon_back_x
+c0de44bb c0de44bb       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_coggle_bitmap)
+c0de44bb c0de44bb       19     1                 C_icon_coggle_bitmap
+c0de44d4 c0de44d4        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_coggle)
+c0de44d4 c0de44d4        a     1                 C_icon_coggle
+c0de44de c0de44de       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_crossmark_bitmap)
+c0de44de c0de44de       19     1                 C_icon_crossmark_bitmap
+c0de44f7 c0de44f7        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_crossmark)
+c0de44f7 c0de44f7        a     1                 C_icon_crossmark
+c0de4501 c0de4501        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_down_bitmap)
+c0de4501 c0de4501        4     1                 C_icon_down_bitmap
+c0de4505 c0de4505        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_down)
+c0de4505 c0de4505        a     1                 C_icon_down
+c0de450f c0de450f        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_left_bitmap)
+c0de450f c0de450f        4     1                 C_icon_left_bitmap
+c0de4513 c0de4513        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_left)
+c0de4513 c0de4513        a     1                 C_icon_left
+c0de451d c0de451d        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_right_bitmap)
+c0de451d c0de451d        4     1                 C_icon_right_bitmap
+c0de4521 c0de4521        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_right)
+c0de4521 c0de4521        a     1                 C_icon_right
+c0de452b c0de452b        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_up_bitmap)
+c0de452b c0de452b        4     1                 C_icon_up_bitmap
+c0de452f c0de452f        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_up)
+c0de452f c0de452f        a     1                 C_icon_up
+c0de4539 c0de4539       17     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_validate_14_bitmap)
+c0de4539 c0de4539       17     1                 C_icon_validate_14_bitmap
+c0de4550 c0de4550        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_validate_14)
+c0de4550 c0de4550        a     1                 C_icon_validate_14
+c0de455a c0de455a       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_warning_bitmap)
+c0de455a c0de455a       19     1                 C_icon_warning_bitmap
+c0de4573 c0de4573        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_warning)
+c0de4573 c0de4573        a     1                 C_icon_warning
+c0de457d c0de457d       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_home_boilerplate_14px_bitmap)
+c0de457d c0de457d       19     1                 C_home_boilerplate_14px_bitmap
+c0de4596 c0de4596        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_home_boilerplate_14px)
+c0de4596 c0de4596        a     1                 C_home_boilerplate_14px
+c0de45a0 c0de45a0      210     1         <internal>:(.text)
+c0de47b0 c0de47b0        9     4         <internal>:(.text)
+c0de47bc c0de47bc        c     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.settingContents)
+c0de47bc c0de47bc        c     1                 settingContents
+c0de47c8 c0de47c8       10     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.infoList)
+c0de47c8 c0de47c8       10     1                 infoList
+c0de47d8 c0de47d8       20     1         <internal>:(.text)
+c0de47f8 c0de47f8        0     1         . = ALIGN ( 4 )
+c0de47f8 c0de47f8        0     1         _etext = .
+c0de47f8 c0de47f8        8     1         . = ALIGN ( PAGE_SIZE )
+c0de4800 c0de4800        0     1         _nvram_data = .
+c0de4800 c0de4800        0     1         . = ALIGN ( PAGE_SIZE )
+c0de4800 c0de4800        0     1         _envram_data = .
+c0de4800 c0de4800        0     1         _install_parameters = .
+c0de4800 c0de4800       43     1         build/nanos2/obj/sdk/src/app_metadata.o:(.install_parameters)
+c0de4800 c0de4800       43     1                 install_parameters
+c0de4843 c0de4843        0     1         _einstall_parameters = .
+c0de4843 c0de4843        0     1         _nvram_end = .
+d0000000 d0000000        0     1 .data
+d0000000 d0000000        0     1         . = ALIGN ( 4 )
+d0000000 d0000000        0     1         _data = .
+d0000000 d0000000        0     1         _edata = .
+d0000000 d0000000        0     1 
+da7a0000 da7a0000     a000     4 .bss
+da7a0000 da7a0000        0     1         _bss = .
+da7a0000 da7a0000      111     1         build/nanos2/obj/sdk/io/src/os_io.o:(.bss.G_io_tx_buffer)
+da7a0000 da7a0000      111     1                 G_io_tx_buffer
+da7a0111 da7a0111      111     1         build/nanos2/obj/sdk/io/src/os_io.o:(.bss.G_io_rx_buffer)
+da7a0111 da7a0111      111     1                 G_io_rx_buffer
+da7a0222 da7a0222        1     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.bss.need_to_start_io)
+da7a0222 da7a0222        1     1                 need_to_start_io
+da7a0224 da7a0224        8     2         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.bss.G_io_app)
+da7a0224 da7a0224        8     1                 G_io_app
+da7a022c da7a022c        1     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.bss.io_os_legacy_apdu_type)
+da7a022c da7a022c        1     1                 io_os_legacy_apdu_type
+da7a0230 da7a0230       24     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.bss.gLayout)
+da7a0230 da7a0230       24     1                 gLayout
+da7a0254 da7a0254       14     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.bss.nbgl_layoutAddText.tmpString)
+da7a0254 da7a0254       14     1                 nbgl_layoutAddText.tmpString
+da7a0268 da7a0268       14     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.bss.nbgl_layoutAddText.tmpString2)
+da7a0268 da7a0268       14     1                 nbgl_layoutAddText.tmpString2
+da7a027c da7a027c       d8     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.bss.contexts)
+da7a027c da7a027c       d8     1                 contexts
+da7a0354 da7a0354       40     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.bss.context)
+da7a0354 da7a0354       40     1                 context
+da7a0394 da7a0394      110     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.bss.G_io_seproxyhal_spi_buffer)
+da7a0394 da7a0394      110     1                 G_io_seproxyhal_spi_buffer
+da7a04a4 da7a04a4        1     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.bss.need_to_start_io)
+da7a04a4 da7a04a4        1     1                 need_to_start_io
+da7a04a8 da7a04a8        c     4         build/nanos2/obj/sdk/lib_standard_app/main.o:(.bss.G_ux_params)
+da7a04a8 da7a04a8        c     1                 G_ux_params
+da7a04b4 da7a04b4        1     1         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.bss.G_io_u2f)
+da7a04b4 da7a04b4        1     1                 G_io_u2f
+da7a04b8 da7a04b8        4     4         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.bss.nbTicks)
+da7a04b8 da7a04b8        4     1                 nbTicks
+da7a04bc da7a04bc       82     1         build/nanos2/obj/sdk/src/ledger_assert.o:(.bss.assert_buffer)
+da7a04bc da7a04bc       82     1                 assert_buffer
+da7a053e da7a053e        0     1         _ebss = .
+da7a053e da7a053e        2     1         . = ALIGN ( 4 )
+da7a0540 da7a0540        0     1         app_stack_canary = .
+da7a0540 da7a0540        4     1         . += 4
+da7a0544 da7a0544        0     1         _stack = .
+da7a0544 da7a0544     9abc     1         . = END_STACK
+da7aa000 da7aa000        0     1         _estack = .
+da7aa000 da7aa000        0     1 
+d0000000 d0000000       10     4 DEBUG
+d0000000 d0000000       10     4         <internal>:(.ARM.exidx)
+       0        0       5d     1 .comment
+       0        0       5d     1         <internal>:(.comment)
+       0        0     15f5     1 .debug_info
+       0        0       48     1         build/nanos2/obj/app/src/apdu/dispatcher.o:(.debug_info)
+      48       48       3b     1         build/nanos2/obj/app/src/app_main.o:(.debug_info)
+      83       83       3b     1         build/nanos2/obj/app/src/handler/get_app_name.o:(.debug_info)
+      be       be       3b     1         build/nanos2/obj/app/src/handler/get_version.o:(.debug_info)
+      f9       f9       27     1         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.debug_info)
+     120      120       23     1         build/nanos2/obj/sdk/io/src/os_io.o:(.debug_info)
+     143      143       40     1         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.debug_info)
+     183      183       27     1         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_info)
+     1aa      1aa       3b     1         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.debug_info)
+     1e5      1e5       4f     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_info)
+     234      234      348     1         build/nanos2/obj/sdk/lib_lists/lists.o:(.debug_info)
+     57c      57c       d8     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.debug_info)
+     654      654       de     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.debug_info)
+     732      732      26a     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.debug_info)
+     99c      99c       27     1         build/nanos2/obj/sdk/lib_standard_app/base58.o:(.debug_info)
+     9c3      9c3       27     1         build/nanos2/obj/sdk/lib_standard_app/bip32.o:(.debug_info)
+     9ea      9ea      1a7     1         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.debug_info)
+     b91      b91       27     1         build/nanos2/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_info)
+     bb8      bb8       3f     1         build/nanos2/obj/sdk/lib_standard_app/format.o:(.debug_info)
+     bf7      bf7       3f     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.debug_info)
+     c36      c36       27     1         build/nanos2/obj/sdk/lib_standard_app/main.o:(.debug_info)
+     c5d      c5d       23     1         build/nanos2/obj/sdk/lib_standard_app/parser.o:(.debug_info)
+     c80      c80       27     1         build/nanos2/obj/sdk/lib_standard_app/read.o:(.debug_info)
+     ca7      ca7       3f     1         build/nanos2/obj/sdk/lib_standard_app/varint.o:(.debug_info)
+     ce6      ce6       27     1         build/nanos2/obj/sdk/lib_standard_app/write.o:(.debug_info)
+     d0d      d0d       27     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_info)
+     d34      d34       27     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_info)
+     d5b      d5b      114     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_info)
+     e6f      e6f       27     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_info)
+     e96      e96       27     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_info)
+     ebd      ebd      203     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_info)
+    10c0     10c0       27     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_info)
+    10e7     10e7       ab     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_info)
+    1192     1192       27     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_info)
+    11b9     11b9       7c     1         build/nanos2/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_info)
+    1235     1235       27     1         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_info)
+    125c     125c       65     1         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.debug_info)
+    12c1     12c1       83     1         build/nanos2/obj/sdk/protocol/src/ledger_protocol.o:(.debug_info)
+    1344     1344       27     1         build/nanos2/obj/sdk/src/cx_hash_iovec.o:(.debug_info)
+    136b     136b       23     1         build/nanos2/obj/sdk/src/cx_wrappers.o:(.debug_info)
+    138e     138e       27     1         build/nanos2/obj/sdk/src/ledger_assert.o:(.debug_info)
+    13b5     13b5       7b     1         build/nanos2/obj/sdk/src/os.o:(.debug_info)
+    1430     1430      150     1         build/nanos2/obj/sdk/src/os_printf.o:(.debug_info)
+    1580     1580       27     1         build/nanos2/obj/sdk/src/pic.o:(.debug_info)
+    15a7     15a7       27     1         build/nanos2/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_info)
+    15ce     15ce       27     1         build/nanos2/obj/sdk/src/syscalls.o:(.debug_info)
+       0        0      a36     1 .debug_abbrev
+       0        0       40     1         build/nanos2/obj/app/src/apdu/dispatcher.o:(.debug_abbrev)
+      40       40       40     1         build/nanos2/obj/app/src/app_main.o:(.debug_abbrev)
+      80       80       40     1         build/nanos2/obj/app/src/handler/get_app_name.o:(.debug_abbrev)
+      c0       c0       40     1         build/nanos2/obj/app/src/handler/get_version.o:(.debug_abbrev)
+     100      100       1a     1         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.debug_abbrev)
+     11a      11a       18     1         build/nanos2/obj/sdk/io/src/os_io.o:(.debug_abbrev)
+     132      132       42     1         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.debug_abbrev)
+     174      174       1a     1         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_abbrev)
+     18e      18e       40     1         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.debug_abbrev)
+     1ce      1ce       4f     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_abbrev)
+     21d      21d       af     1         build/nanos2/obj/sdk/lib_lists/lists.o:(.debug_abbrev)
+     2cc      2cc       4f     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.debug_abbrev)
+     31b      31b       51     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.debug_abbrev)
+     36c      36c       6f     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.debug_abbrev)
+     3db      3db       1a     1         build/nanos2/obj/sdk/lib_standard_app/base58.o:(.debug_abbrev)
+     3f5      3f5       1a     1         build/nanos2/obj/sdk/lib_standard_app/bip32.o:(.debug_abbrev)
+     40f      40f       71     1         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.debug_abbrev)
+     480      480       1a     1         build/nanos2/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_abbrev)
+     49a      49a       42     1         build/nanos2/obj/sdk/lib_standard_app/format.o:(.debug_abbrev)
+     4dc      4dc       42     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.debug_abbrev)
+     51e      51e       1a     1         build/nanos2/obj/sdk/lib_standard_app/main.o:(.debug_abbrev)
+     538      538       18     1         build/nanos2/obj/sdk/lib_standard_app/parser.o:(.debug_abbrev)
+     550      550       1a     1         build/nanos2/obj/sdk/lib_standard_app/read.o:(.debug_abbrev)
+     56a      56a       42     1         build/nanos2/obj/sdk/lib_standard_app/varint.o:(.debug_abbrev)
+     5ac      5ac       1a     1         build/nanos2/obj/sdk/lib_standard_app/write.o:(.debug_abbrev)
+     5c6      5c6       1a     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_abbrev)
+     5e0      5e0       1a     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_abbrev)
+     5fa      5fa       71     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_abbrev)
+     66b      66b       1a     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_abbrev)
+     685      685       1a     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_abbrev)
+     69f      69f       5e     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_abbrev)
+     6fd      6fd       1a     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_abbrev)
+     717      717       5e     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_abbrev)
+     775      775       1a     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_abbrev)
+     78f      78f       60     1         build/nanos2/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_abbrev)
+     7ef      7ef       1a     1         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_abbrev)
+     809      809       51     1         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.debug_abbrev)
+     85a      85a       71     1         build/nanos2/obj/sdk/protocol/src/ledger_protocol.o:(.debug_abbrev)
+     8cb      8cb       1a     1         build/nanos2/obj/sdk/src/cx_hash_iovec.o:(.debug_abbrev)
+     8e5      8e5       18     1         build/nanos2/obj/sdk/src/cx_wrappers.o:(.debug_abbrev)
+     8fd      8fd       1a     1         build/nanos2/obj/sdk/src/ledger_assert.o:(.debug_abbrev)
+     917      917       53     1         build/nanos2/obj/sdk/src/os.o:(.debug_abbrev)
+     96a      96a       7e     1         build/nanos2/obj/sdk/src/os_printf.o:(.debug_abbrev)
+     9e8      9e8       1a     1         build/nanos2/obj/sdk/src/pic.o:(.debug_abbrev)
+     a02      a02       1a     1         build/nanos2/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_abbrev)
+     a1c      a1c       1a     1         build/nanos2/obj/sdk/src/syscalls.o:(.debug_abbrev)
+       0        0     b8f2     1 .debug_line
+       0        0       e1     1         build/nanos2/obj/app/src/apdu/dispatcher.o:(.debug_line)
+      e1       e1       bf     1         build/nanos2/obj/app/src/app_main.o:(.debug_line)
+     1a0      1a0       82     1         build/nanos2/obj/app/src/handler/get_app_name.o:(.debug_line)
+     222      222       85     1         build/nanos2/obj/app/src/handler/get_version.o:(.debug_line)
+     2a7      2a7       72     1         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.debug_line)
+     319      319       ad     1         build/nanos2/obj/sdk/io/src/os_io.o:(.debug_line)
+     3c6      3c6      169     1         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.debug_line)
+     52f      52f      1ff     1         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_line)
+     72e      72e      110     1         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.debug_line)
+     83e      83e      3e5     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_line)
+     c23      c23      a65     1         build/nanos2/obj/sdk/lib_lists/lists.o:(.debug_line)
+    1688     1688      ac7     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.debug_line)
+    214f     214f      727     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.debug_line)
+    2876     2876     1e80     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.debug_line)
+    46f6     46f6      252     1         build/nanos2/obj/sdk/lib_standard_app/base58.o:(.debug_line)
+    4948     4948      13e     1         build/nanos2/obj/sdk/lib_standard_app/bip32.o:(.debug_line)
+    4a86     4a86      66e     1         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.debug_line)
+    50f4     50f4      1f1     1         build/nanos2/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_line)
+    52e5     52e5      2e9     1         build/nanos2/obj/sdk/lib_standard_app/format.o:(.debug_line)
+    55ce     55ce      1b5     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.debug_line)
+    5783     5783       cd     1         build/nanos2/obj/sdk/lib_standard_app/main.o:(.debug_line)
+    5850     5850       a6     1         build/nanos2/obj/sdk/lib_standard_app/parser.o:(.debug_line)
+    58f6     58f6      155     1         build/nanos2/obj/sdk/lib_standard_app/read.o:(.debug_line)
+    5a4b     5a4b      14b     1         build/nanos2/obj/sdk/lib_standard_app/varint.o:(.debug_line)
+    5b96     5b96      172     1         build/nanos2/obj/sdk/lib_standard_app/write.o:(.debug_line)
+    5d08     5d08      2f0     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_line)
+    5ff8     5ff8      527     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_line)
+    651f     651f      5a1     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_line)
+    6ac0     6ac0      192     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_line)
+    6c52     6c52      115     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_line)
+    6d67     6d67      bb3     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_line)
+    791a     791a      3cb     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_line)
+    7ce5     7ce5      758     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_line)
+    843d     843d      2e3     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_line)
+    8720     8720      356     1         build/nanos2/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_line)
+    8a76     8a76       96     1         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_line)
+    8b0c     8b0c      12d     1         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.debug_line)
+    8c39     8c39      38d     1         build/nanos2/obj/sdk/protocol/src/ledger_protocol.o:(.debug_line)
+    8fc6     8fc6      2a1     1         build/nanos2/obj/sdk/src/cx_hash_iovec.o:(.debug_line)
+    9267     9267       a7     1         build/nanos2/obj/sdk/src/cx_wrappers.o:(.debug_line)
+    930e     930e      128     1         build/nanos2/obj/sdk/src/ledger_assert.o:(.debug_line)
+    9436     9436      4c9     1         build/nanos2/obj/sdk/src/os.o:(.debug_line)
+    98ff     98ff      905     1         build/nanos2/obj/sdk/src/os_printf.o:(.debug_line)
+    a204     a204       9e     1         build/nanos2/obj/sdk/src/pic.o:(.debug_line)
+    a2a2     a2a2      14f     1         build/nanos2/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_line)
+    a3f1     a3f1     1501     1         build/nanos2/obj/sdk/src/syscalls.o:(.debug_line)
+       0        0     41e8     4 .debug_frame
+       0        0       34     4         build/nanos2/obj/app/src/apdu/dispatcher.o:(.debug_frame)
+      34       34       3c     4         build/nanos2/obj/app/src/app_main.o:(.debug_frame)
+      70       70       30     4         build/nanos2/obj/app/src/handler/get_app_name.o:(.debug_frame)
+      a0       a0       30     4         build/nanos2/obj/app/src/handler/get_version.o:(.debug_frame)
+      d0       d0       40     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.debug_frame)
+     110      110       34     4         build/nanos2/obj/sdk/io/src/os_io.o:(.debug_frame)
+     144      144       54     4         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.debug_frame)
+     198      198      16c     4         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_frame)
+     304      304       6c     4         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.debug_frame)
+     370      370      16c     4         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_frame)
+     4dc      4dc      298     4         build/nanos2/obj/sdk/lib_lists/lists.o:(.debug_frame)
+     774      774      180     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.debug_frame)
+     8f4      8f4      13c     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.debug_frame)
+     a30      a30      8b0     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.debug_frame)
+    12e0     12e0       64     4         build/nanos2/obj/sdk/lib_standard_app/base58.o:(.debug_frame)
+    1344     1344       60     4         build/nanos2/obj/sdk/lib_standard_app/bip32.o:(.debug_frame)
+    13a4     13a4      1ec     4         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.debug_frame)
+    1590     1590       f4     4         build/nanos2/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_frame)
+    1684     1684       c0     4         build/nanos2/obj/sdk/lib_standard_app/format.o:(.debug_frame)
+    1744     1744       a4     4         build/nanos2/obj/sdk/lib_standard_app/io.o:(.debug_frame)
+    17e8     17e8       70     4         build/nanos2/obj/sdk/lib_standard_app/main.o:(.debug_frame)
+    1858     1858       24     4         build/nanos2/obj/sdk/lib_standard_app/parser.o:(.debug_frame)
+    187c     187c       84     4         build/nanos2/obj/sdk/lib_standard_app/read.o:(.debug_frame)
+    1900     1900       58     4         build/nanos2/obj/sdk/lib_standard_app/varint.o:(.debug_frame)
+    1958     1958       84     4         build/nanos2/obj/sdk/lib_standard_app/write.o:(.debug_frame)
+    19dc     19dc      168     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_frame)
+    1b44     1b44      1f0     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_frame)
+    1d34     1d34       ac     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_frame)
+    1de0     1de0       b8     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_frame)
+    1e98     1e98       c8     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_frame)
+    1f60     1f60      308     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_frame)
+    2268     2268      104     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_frame)
+    236c     236c      124     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_frame)
+    2490     2490      100     4         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_frame)
+    2590     2590       68     4         build/nanos2/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_frame)
+    25f8     25f8       64     4         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_frame)
+    265c     265c       60     4         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.debug_frame)
+    26bc     26bc       64     4         build/nanos2/obj/sdk/protocol/src/ledger_protocol.o:(.debug_frame)
+    2720     2720      238     4         build/nanos2/obj/sdk/src/cx_hash_iovec.o:(.debug_frame)
+    2958     2958       3c     4         build/nanos2/obj/sdk/src/cx_wrappers.o:(.debug_frame)
+    2994     2994       e0     4         build/nanos2/obj/sdk/src/ledger_assert.o:(.debug_frame)
+    2a74     2a74      1ac     4         build/nanos2/obj/sdk/src/os.o:(.debug_frame)
+    2c20     2c20       a8     4         build/nanos2/obj/sdk/src/os_printf.o:(.debug_frame)
+    2cc8     2cc8       3c     4         build/nanos2/obj/sdk/src/pic.o:(.debug_frame)
+    2d04     2d04       e4     4         build/nanos2/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_frame)
+    2de8     2de8     1400     4         build/nanos2/obj/sdk/src/syscalls.o:(.debug_frame)
+       0        0     163e     1 .debug_str
+       0        0     163e     1         <internal>:(.debug_str)
+       0        0        6     1 ledger.target
+       0        0        6     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.target)
+       0        0        6     1                 target
+       0        0        d     1 ledger.target_name
+       0        0        d     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.target_name)
+       0        0        d     1                 target_name
+       0        0        a     1 ledger.target_id
+       0        0        a     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.target_id)
+       0        0        a     1                 target_id
+       0        0        b     1 ledger.app_name
+       0        0        b     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.app_name)
+       0        0        b     1                 app_name
+       0        0        5     1 ledger.app_version
+       0        0        5     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.app_version)
+       0        0        5     1                 app_version
+       0        0        2     1 ledger.api_level
+       0        0        2     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.api_level)
+       0        0        2     1                 api_level
+       0        0       11     1 ledger.sdk_name
+       0        0       11     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.sdk_name)
+       0        0       11     1                 sdk_name
+       0        0        8     1 ledger.sdk_version
+       0        0        8     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.sdk_version)
+       0        0        8     1                 sdk_version
+       0        0       28     1 ledger.sdk_hash
+       0        0       28     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.sdk_hash)
+       0        0       28     1                 sdk_hash
+       0        0        4     1 ledger.sdk_graphics
+       0        0        4     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.sdk_graphics)
+       0        0        4     1                 sdk_graphics
+       0        0        3     1 ledger.app_flags
+       0        0        3     1         build/nanos2/obj/sdk/src/app_metadata.o:(ledger.app_flags)
+       0        0        3     1                 app_flags
+d0000010 d0000010        0     1 PROVIDE ( _nvram = ABSOLUTE ( _nvram_start ) )
+d0000010 d0000010        0     1 PROVIDE ( _envram = ABSOLUTE ( _nvram_end ) )
+       0        0       45     1 .ARM.attributes
+       0        0       45     1         build/nanos2/gen_src/glyphs.o:(.ARM.attributes)
+       0        0      6b0     1 .debug_str_offsets
+       0        0       1c     1         build/nanos2/obj/app/src/apdu/dispatcher.o:(.debug_str_offsets)
+      1c       1c       1c     1         build/nanos2/obj/app/src/app_main.o:(.debug_str_offsets)
+      38       38       1c     1         build/nanos2/obj/app/src/handler/get_app_name.o:(.debug_str_offsets)
+      54       54       1c     1         build/nanos2/obj/app/src/handler/get_version.o:(.debug_str_offsets)
+      70       70       14     1         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.debug_str_offsets)
+      84       84       14     1         build/nanos2/obj/sdk/io/src/os_io.o:(.debug_str_offsets)
+      98       98       1c     1         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.debug_str_offsets)
+      b4       b4       14     1         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_str_offsets)
+      c8       c8       1c     1         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.debug_str_offsets)
+      e4       e4       24     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_str_offsets)
+     108      108       a4     1         build/nanos2/obj/sdk/lib_lists/lists.o:(.debug_str_offsets)
+     1ac      1ac       34     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.debug_str_offsets)
+     1e0      1e0       44     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.debug_str_offsets)
+     224      224       a4     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.debug_str_offsets)
+     2c8      2c8       14     1         build/nanos2/obj/sdk/lib_standard_app/base58.o:(.debug_str_offsets)
+     2dc      2dc       14     1         build/nanos2/obj/sdk/lib_standard_app/bip32.o:(.debug_str_offsets)
+     2f0      2f0       5c     1         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.debug_str_offsets)
+     34c      34c       14     1         build/nanos2/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_str_offsets)
+     360      360       1c     1         build/nanos2/obj/sdk/lib_standard_app/format.o:(.debug_str_offsets)
+     37c      37c       1c     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.debug_str_offsets)
+     398      398       14     1         build/nanos2/obj/sdk/lib_standard_app/main.o:(.debug_str_offsets)
+     3ac      3ac       14     1         build/nanos2/obj/sdk/lib_standard_app/parser.o:(.debug_str_offsets)
+     3c0      3c0       14     1         build/nanos2/obj/sdk/lib_standard_app/read.o:(.debug_str_offsets)
+     3d4      3d4       1c     1         build/nanos2/obj/sdk/lib_standard_app/varint.o:(.debug_str_offsets)
+     3f0      3f0       14     1         build/nanos2/obj/sdk/lib_standard_app/write.o:(.debug_str_offsets)
+     404      404       14     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_str_offsets)
+     418      418       14     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_str_offsets)
+     42c      42c       48     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_str_offsets)
+     474      474       14     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_str_offsets)
+     488      488       14     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_str_offsets)
+     49c      49c       68     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_str_offsets)
+     504      504       14     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_str_offsets)
+     518      518       2c     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_str_offsets)
+     544      544       14     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_str_offsets)
+     558      558       30     1         build/nanos2/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_str_offsets)
+     588      588       14     1         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_str_offsets)
+     59c      59c       24     1         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.debug_str_offsets)
+     5c0      5c0       28     1         build/nanos2/obj/sdk/protocol/src/ledger_protocol.o:(.debug_str_offsets)
+     5e8      5e8       14     1         build/nanos2/obj/sdk/src/cx_hash_iovec.o:(.debug_str_offsets)
+     5fc      5fc       14     1         build/nanos2/obj/sdk/src/cx_wrappers.o:(.debug_str_offsets)
+     610      610       14     1         build/nanos2/obj/sdk/src/ledger_assert.o:(.debug_str_offsets)
+     624      624       2c     1         build/nanos2/obj/sdk/src/os.o:(.debug_str_offsets)
+     650      650       24     1         build/nanos2/obj/sdk/src/os_printf.o:(.debug_str_offsets)
+     674      674       14     1         build/nanos2/obj/sdk/src/pic.o:(.debug_str_offsets)
+     688      688       14     1         build/nanos2/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_str_offsets)
+     69c      69c       14     1         build/nanos2/obj/sdk/src/syscalls.o:(.debug_str_offsets)
+       0        0      c58     1 .debug_addr
+       0        0       14     1         build/nanos2/obj/app/src/apdu/dispatcher.o:(.debug_addr)
+      14       14       10     1         build/nanos2/obj/app/src/app_main.o:(.debug_addr)
+      24       24       10     1         build/nanos2/obj/app/src/handler/get_app_name.o:(.debug_addr)
+      34       34       10     1         build/nanos2/obj/app/src/handler/get_version.o:(.debug_addr)
+      44       44       10     1         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.debug_addr)
+      54       54        c     1         build/nanos2/obj/sdk/io/src/os_io.o:(.debug_addr)
+      60       60       14     1         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.debug_addr)
+      74       74       40     1         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_addr)
+      b4       b4       18     1         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.debug_addr)
+      cc       cc       40     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_addr)
+     10c      10c       bc     1         build/nanos2/obj/sdk/lib_lists/lists.o:(.debug_addr)
+     1c8      1c8       38     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.debug_addr)
+     200      200       38     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.debug_addr)
+     238      238      160     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.debug_addr)
+     398      398       10     1         build/nanos2/obj/sdk/lib_standard_app/base58.o:(.debug_addr)
+     3a8      3a8       10     1         build/nanos2/obj/sdk/lib_standard_app/bip32.o:(.debug_addr)
+     3b8      3b8       80     1         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.debug_addr)
+     438      438       20     1         build/nanos2/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_addr)
+     458      458       20     1         build/nanos2/obj/sdk/lib_standard_app/format.o:(.debug_addr)
+     478      478       24     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.debug_addr)
+     49c      49c       18     1         build/nanos2/obj/sdk/lib_standard_app/main.o:(.debug_addr)
+     4b4      4b4        c     1         build/nanos2/obj/sdk/lib_standard_app/parser.o:(.debug_addr)
+     4c0      4c0       20     1         build/nanos2/obj/sdk/lib_standard_app/read.o:(.debug_addr)
+     4e0      4e0       18     1         build/nanos2/obj/sdk/lib_standard_app/varint.o:(.debug_addr)
+     4f8      4f8       20     1         build/nanos2/obj/sdk/lib_standard_app/write.o:(.debug_addr)
+     518      518       40     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_addr)
+     558      558       58     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_addr)
+     5b0      5b0       50     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_addr)
+     600      600       24     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_addr)
+     624      624       24     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_addr)
+     648      648       b4     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_addr)
+     6fc      6fc       2c     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_addr)
+     728      728       40     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_addr)
+     768      768       2c     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_addr)
+     794      794       20     1         build/nanos2/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_addr)
+     7b4      7b4       14     1         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_addr)
+     7c8      7c8       1c     1         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.debug_addr)
+     7e4      7e4       20     1         build/nanos2/obj/sdk/protocol/src/ledger_protocol.o:(.debug_addr)
+     804      804       54     1         build/nanos2/obj/sdk/src/cx_hash_iovec.o:(.debug_addr)
+     858      858        c     1         build/nanos2/obj/sdk/src/cx_wrappers.o:(.debug_addr)
+     864      864       28     1         build/nanos2/obj/sdk/src/ledger_assert.o:(.debug_addr)
+     88c      88c       5c     1         build/nanos2/obj/sdk/src/os.o:(.debug_addr)
+     8e8      8e8       58     1         build/nanos2/obj/sdk/src/os_printf.o:(.debug_addr)
+     940      940       10     1         build/nanos2/obj/sdk/src/pic.o:(.debug_addr)
+     950      950       28     1         build/nanos2/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_addr)
+     978      978      2e0     1         build/nanos2/obj/sdk/src/syscalls.o:(.debug_addr)
+       0        0      976     1 .debug_line_str
+       0        0      976     1         <internal>:(.debug_line_str)
+       0        0      ffc     1 .debug_rnglists
+       0        0       17     1         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.debug_rnglists)
+      17       17       18     1         build/nanos2/obj/sdk/io/src/os_io_default_apdu.o:(.debug_rnglists)
+      2f       2f       3b     1         build/nanos2/obj/sdk/io/src/os_io_seph_cmd.o:(.debug_rnglists)
+      6a       6a       2a     1         build/nanos2/obj/sdk/io/src/os_io_seph_ux.o:(.debug_rnglists)
+      94       94       5c     1         build/nanos2/obj/sdk/io_legacy/src/os_io_legacy.o:(.debug_rnglists)
+      f0       f0       e5     1         build/nanos2/obj/sdk/lib_lists/lists.o:(.debug_rnglists)
+     1d5      1d5      126     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_layout_nanos.o:(.debug_rnglists)
+     2fb      2fb       c3     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_step.o:(.debug_rnglists)
+     3be      3be      27d     1         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.debug_rnglists)
+     63b      63b       19     1         build/nanos2/obj/sdk/lib_standard_app/base58.o:(.debug_rnglists)
+     654      654       18     1         build/nanos2/obj/sdk/lib_standard_app/bip32.o:(.debug_rnglists)
+     66c      66c       f6     1         build/nanos2/obj/sdk/lib_standard_app/buffer.o:(.debug_rnglists)
+     762      762       27     1         build/nanos2/obj/sdk/lib_standard_app/crypto_helpers.o:(.debug_rnglists)
+     789      789       22     1         build/nanos2/obj/sdk/lib_standard_app/format.o:(.debug_rnglists)
+     7ab      7ab       24     1         build/nanos2/obj/sdk/lib_standard_app/io.o:(.debug_rnglists)
+     7cf      7cf       1d     1         build/nanos2/obj/sdk/lib_standard_app/main.o:(.debug_rnglists)
+     7ec      7ec       23     1         build/nanos2/obj/sdk/lib_standard_app/read.o:(.debug_rnglists)
+     80f      80f       1a     1         build/nanos2/obj/sdk/lib_standard_app/varint.o:(.debug_rnglists)
+     829      829       23     1         build/nanos2/obj/sdk/lib_standard_app/write.o:(.debug_rnglists)
+     84c      84c       3c     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_conf.o:(.debug_rnglists)
+     888      888       4e     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_core.o:(.debug_rnglists)
+     8d6      8d6       7a     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ctlreq.o:(.debug_rnglists)
+     950      950       27     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_desc.o:(.debug_rnglists)
+     977      977       26     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ioreq.o:(.debug_rnglists)
+     99d      99d       d2     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger.o:(.debug_rnglists)
+     a6f      a6f       2e     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid.o:(.debug_rnglists)
+     a9d      a9d       78     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o:(.debug_rnglists)
+     b15      b15       2e     1         build/nanos2/obj/sdk/lib_stusb/src/usbd_ledger_webusb.o:(.debug_rnglists)
+     b43      b43       3d     1         build/nanos2/obj/sdk/lib_u2f/src/u2f_transport.o:(.debug_rnglists)
+     b80      b80       1a     1         build/nanos2/obj/sdk/lib_u2f_legacy/src/u2f_legacy.o:(.debug_rnglists)
+     b9a      b9a       27     1         build/nanos2/obj/sdk/lib_ux_nbgl/ux.o:(.debug_rnglists)
+     bc1      bc1       5f     1         build/nanos2/obj/sdk/protocol/src/ledger_protocol.o:(.debug_rnglists)
+     c20      c20       4c     1         build/nanos2/obj/sdk/src/cx_hash_iovec.o:(.debug_rnglists)
+     c6c      c6c       29     1         build/nanos2/obj/sdk/src/ledger_assert.o:(.debug_rnglists)
+     c95      c95       48     1         build/nanos2/obj/sdk/src/os.o:(.debug_rnglists)
+     cdd      cdd       76     1         build/nanos2/obj/sdk/src/os_printf.o:(.debug_rnglists)
+     d53      d53       17     1         build/nanos2/obj/sdk/src/pic.o:(.debug_rnglists)
+     d6a      d6a       29     1         build/nanos2/obj/sdk/src/retrocompatibility_endorsement.o:(.debug_rnglists)
+     d93      d93      269     1         build/nanos2/obj/sdk/src/syscalls.o:(.debug_rnglists)
+       0        0     1bd0     4 .symtab
+       0        0     1bd0     4         <internal>:(.symtab)
+       0        0      186     1 .shstrtab
+       0        0      186     1         <internal>:(.shstrtab)
+       0        0     1586     1 .strtab
+       0        0     1586     1         <internal>:(.strtab)
