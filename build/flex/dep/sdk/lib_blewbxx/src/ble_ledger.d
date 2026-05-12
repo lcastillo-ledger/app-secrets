@@ -35,23 +35,22 @@ build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o: \
   /opt/flex-secure-sdk/include/arch.h /opt/flex-secure-sdk/include/ux.h \
   /opt/flex-secure-sdk/lib_ux_nbgl/ux_nbgl.h \
   /opt/flex-secure-sdk/include/os_ux.h \
-  /opt/flex-secure-sdk/include/os_app.h \
   /opt/flex-secure-sdk/include/os_ux_id.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_screen.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_types.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_obj.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_fonts.h \
-  /opt/flex-secure-sdk/lib_nbgl/serialization/ux_loc.h \
+  /opt/flex-secure-sdk/include/ux_loc.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_touch.h \
   build/flex/gen_src/glyphs.h \
   /opt/flex-secure-sdk/io/include/os_io_seph_ux.h \
   /opt/flex-secure-sdk/include/os_lib.h \
-  /opt/flex-secure-sdk/include/os_memory.h \
   /opt/flex-secure-sdk/include/os_nvm.h \
   /opt/flex-secure-sdk/include/os_pic.h \
   /opt/flex-secure-sdk/include/os_pin.h \
   /opt/flex-secure-sdk/include/os_random.h \
   /opt/flex-secure-sdk/include/os_registry.h \
+  /opt/flex-secure-sdk/include/os_app.h \
   /opt/flex-secure-sdk/include/os_screen.h \
   /opt/flex-secure-sdk/include/os_seed.h \
   /opt/flex-secure-sdk/lib_cxng/include/lcx_ecfp.h \
@@ -61,9 +60,38 @@ build/flex/obj/sdk/lib_blewbxx/src/ble_ledger.o: \
   /opt/flex-secure-sdk/include/syscalls.h \
   /opt/flex-secure-sdk/include/os_apilevel.h \
   /opt/flex-secure-sdk/lib_cxng/include/lcx_rng.h \
+  /opt/flex-secure-sdk/lib_cxng/include/libcxng.h \
+  /opt/flex-secure-sdk/include/ox.h \
+  /opt/flex-secure-sdk/include/ox_aes.h \
+  /opt/flex-secure-sdk/include/ox_bls.h \
+  /opt/flex-secure-sdk/include/ox_crc.h \
+  /opt/flex-secure-sdk/include/ox_rng.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_ripemd160.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_sha512.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_sha3.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_blake2.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_groestl.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_blake3.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_hmac.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_pbkdf2.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_math.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_chacha.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_cipher.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_aes.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_cmac.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_aes_gcm.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_aes_siv.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_aead.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_poly1305.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_chacha_poly.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_rsa.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_ecdsa.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_eddsa.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_ecschnorr.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_ecdh.h \
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_crc.h \
   /opt/flex-secure-sdk/lib_blewbxx/include/ble_cmd.h \
   /opt/flex-secure-sdk/lib_blewbxx/include/ble_types.h \
   /opt/flex-secure-sdk/lib_blewbxx/include/ble_ledger.h \
-  /opt/flex-secure-sdk/lib_cxng/include/lcx_crc.h \
   /opt/flex-secure-sdk/lib_blewbxx/include/ble_ledger_types.h \
   /opt/flex-secure-sdk/lib_blewbxx/include/ble_ledger_profile_apdu.h

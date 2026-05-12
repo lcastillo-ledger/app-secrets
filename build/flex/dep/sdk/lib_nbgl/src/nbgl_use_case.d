@@ -13,7 +13,6 @@ build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o: \
   /opt/flex-secure-sdk/lib_ux_nbgl/ux_nbgl.h \
   /opt/flex-secure-sdk/include/os_math.h \
   /opt/flex-secure-sdk/include/os_ux.h \
-  /opt/flex-secure-sdk/include/os_app.h \
   /opt/flex-secure-sdk/include/os_types.h \
   /opt/flex-secure-sdk/include/os_ux_id.h \
   /opt/flex-secure-sdk/include/os_task.h \
@@ -23,7 +22,7 @@ build/flex/obj/sdk/lib_nbgl/src/nbgl_use_case.o: \
   /opt/flex-secure-sdk/include/app_config.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_obj.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_fonts.h \
-  /opt/flex-secure-sdk/lib_nbgl/serialization/ux_loc.h \
+  /opt/flex-secure-sdk/include/ux_loc.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_touch.h \
   build/flex/gen_src/glyphs.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_page.h \

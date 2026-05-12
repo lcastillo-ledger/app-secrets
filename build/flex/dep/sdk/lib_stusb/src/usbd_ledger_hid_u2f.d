@@ -39,23 +39,22 @@ build/flex/obj/sdk/lib_stusb/src/usbd_ledger_hid_u2f.o: \
   /opt/flex-secure-sdk/include/arch.h /opt/flex-secure-sdk/include/ux.h \
   /opt/flex-secure-sdk/lib_ux_nbgl/ux_nbgl.h \
   /opt/flex-secure-sdk/include/os_ux.h \
-  /opt/flex-secure-sdk/include/os_app.h \
   /opt/flex-secure-sdk/include/os_ux_id.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_screen.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_types.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_obj.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_fonts.h \
-  /opt/flex-secure-sdk/lib_nbgl/serialization/ux_loc.h \
+  /opt/flex-secure-sdk/include/ux_loc.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_touch.h \
   build/flex/gen_src/glyphs.h \
   /opt/flex-secure-sdk/io/include/os_io_seph_ux.h \
   /opt/flex-secure-sdk/include/os_lib.h \
-  /opt/flex-secure-sdk/include/os_memory.h \
   /opt/flex-secure-sdk/include/os_nvm.h \
   /opt/flex-secure-sdk/include/os_pic.h \
   /opt/flex-secure-sdk/include/os_pin.h \
   /opt/flex-secure-sdk/include/os_random.h \
   /opt/flex-secure-sdk/include/os_registry.h \
+  /opt/flex-secure-sdk/include/os_app.h \
   /opt/flex-secure-sdk/include/os_screen.h \
   /opt/flex-secure-sdk/include/os_seed.h \
   /opt/flex-secure-sdk/lib_cxng/include/lcx_ecfp.h \

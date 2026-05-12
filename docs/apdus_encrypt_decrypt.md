@@ -21,6 +21,7 @@ The application interface can be accessed over HID or BLE.
 | `STAGE_FINAL` | `0x02` | Process final chunk and return/verify GCM tag. |
 | `P2` | `0x00` | Reserved, MUST be zero. |
 | `MAX_CHUNK` | `240` | Maximum plaintext/ciphertext bytes in one `UPDATE` or `FINAL` APDU. |
+| `MAX_DECRYPT_FINAL_CHUNK` | `239` | Maximum trailing ciphertext bytes in `DECRYPT_FINAL`, because the APDU also carries the 16-byte GCM tag. |
 | `MAX_SESSION_BYTES` | `0xFFFFFFFF` | Maximum plaintext/ciphertext bytes in one streaming session. |
 | `MAX_METADATA_HEADER` | `255` | Maximum `Magic || metadata_len || metadata TLVs` bytes returned by `ENCRYPT_INIT` or accepted by `DECRYPT_INIT`. |
 | `MAX_METADATA_TLVS_WITHOUT_NONCE` | `229` | Maximum metadata TLV bytes accepted by `ENCRYPT_INIT`, leaving room for the device-generated `NONCE` TLV in a 255-byte metadata header. |
@@ -196,7 +197,7 @@ _Input data_
 
 | Description | Length |
 | --- | --- |
-| Trailing ciphertext chunk | `0..240` |
+| Trailing ciphertext chunk | `0..239` |
 | GCM tag | 16 |
 
 _Output data_

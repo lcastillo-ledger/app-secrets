@@ -59,6 +59,9 @@ extern const nbgl_icon_details_t C_round_24px;
 extern uint8_t const C_switch_60_40_bitmap[300];
 extern const nbgl_icon_details_t C_switch_60_40;
 
+extern uint8_t const C_Address_Book_64px_bitmap[451];
+extern const nbgl_icon_details_t C_Address_Book_64px;
+
 extern uint8_t const C_Check_Circle_64px_bitmap[571];
 extern const nbgl_icon_details_t C_Check_Circle_64px;
 

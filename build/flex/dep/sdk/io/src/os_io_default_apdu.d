@@ -48,7 +48,7 @@ build/flex/obj/sdk/io/src/os_io_default_apdu.o: \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_types.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_obj.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_fonts.h \
-  /opt/flex-secure-sdk/lib_nbgl/serialization/ux_loc.h \
+  /opt/flex-secure-sdk/include/ux_loc.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_touch.h \
   build/flex/gen_src/glyphs.h \
   /opt/flex-secure-sdk/io/include/os_io_seph_ux.h

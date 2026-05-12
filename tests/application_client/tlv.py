@@ -23,7 +23,7 @@ def der_encode(value: int) -> bytes:
 
 def format_tlv(tag: int, value: Union[int, str, bytes]) -> bytes:
     """
-    Format a TLV (Tag-Length-Value) entry for CAL dynamic token descriptor.
+    Format a TLV (Tag-Length-Value) entry using DER-encoded tag and length fields.
 
     Converts various Python types to properly formatted TLV bytes:
     - int: Encoded as big-endian bytes (minimum 1 byte)
@@ -38,10 +38,10 @@ def format_tlv(tag: int, value: Union[int, str, bytes]) -> bytes:
         Complete TLV entry: tag + length + value (all DER-encoded)
 
     Example:
-        >>> format_tlv(0x01, 0x90)  # STRUCTURE_TYPE = DYNAMIC_TOKEN
-        b'\\x01\\x01\\x90'
-        >>> format_tlv(0x05, "USDC")  # TICKER
-        b'\\x05\\x04USDC'
+        >>> format_tlv(0x01, 0x34)  # STRUCTURE_TYPE = FILE_METADATA
+        b'\\x01\\x01\\x34'
+        >>> format_tlv(0x20, "demo")  # TRUSTED_NAME
+        b'\\x20\\x04demo'
     """
     if isinstance(value, int):
         # max() to have minimum length of 1

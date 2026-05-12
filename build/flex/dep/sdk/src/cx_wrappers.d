@@ -50,5 +50,4 @@ build/flex/obj/sdk/src/cx_wrappers.o: \
   /opt/flex-secure-sdk/lib_cxng/include/lcx_eddsa.h \
   /opt/flex-secure-sdk/lib_cxng/include/lcx_ecschnorr.h \
   /opt/flex-secure-sdk/lib_cxng/include/lcx_ecdh.h \
-  /opt/flex-secure-sdk/lib_cxng/include/lcx_crc.h \
-  /opt/flex-secure-sdk/lib_cxng/src/cx_ecfp.h
+  /opt/flex-secure-sdk/lib_cxng/include/lcx_crc.h

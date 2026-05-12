@@ -4,7 +4,6 @@ build/flex/obj/app/src/apdu/dispatcher.o: /app/src/apdu/dispatcher.c \
   /opt/flex-secure-sdk/lib_ux_nbgl/ux_nbgl.h \
   /opt/flex-secure-sdk/include/os_math.h \
   /opt/flex-secure-sdk/include/os_ux.h \
-  /opt/flex-secure-sdk/include/os_app.h \
   /opt/flex-secure-sdk/include/os_types.h \
   /opt/flex-secure-sdk/include/os_utils.h \
   /opt/flex-secure-sdk/include/arch.h \
@@ -18,7 +17,7 @@ build/flex/obj/app/src/apdu/dispatcher.o: /app/src/apdu/dispatcher.c \
   /opt/flex-secure-sdk/include/app_config.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_obj.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_fonts.h \
-  /opt/flex-secure-sdk/lib_nbgl/serialization/ux_loc.h \
+  /opt/flex-secure-sdk/include/ux_loc.h \
   /opt/flex-secure-sdk/lib_nbgl/include/nbgl_touch.h \
   /opt/flex-secure-sdk/include/seproxyhal_protocol.h \
   build/flex/gen_src/glyphs.h /opt/flex-secure-sdk/io/include/os_io.h \
@@ -30,6 +29,7 @@ build/flex/obj/app/src/apdu/dispatcher.o: /app/src/apdu/dispatcher.c \
   /opt/flex-secure-sdk/io/include/os_io_seph_ux.h \
   /opt/flex-secure-sdk/lib_standard_app/buffer.h \
   /opt/flex-secure-sdk/lib_standard_app/macros.h \
+  /opt/flex-secure-sdk/lib_standard_app/bip32.h \
   /opt/flex-secure-sdk/include/ledger_assert.h \
   /opt/flex-secure-sdk/include/ledger_assert_internals.h \
   /opt/flex-secure-sdk/include/os_print.h src/apdu/dispatcher.h \
@@ -50,12 +50,12 @@ build/flex/obj/app/src/apdu/dispatcher.o: /app/src/apdu/dispatcher.c \
   /opt/flex-secure-sdk/include/os_halt.h \
   /opt/flex-secure-sdk/include/os_id.h \
   /opt/flex-secure-sdk/include/os_lib.h \
-  /opt/flex-secure-sdk/include/os_memory.h \
   /opt/flex-secure-sdk/include/os_nvm.h \
   /opt/flex-secure-sdk/include/os_pic.h \
   /opt/flex-secure-sdk/include/os_pin.h \
   /opt/flex-secure-sdk/include/os_random.h \
   /opt/flex-secure-sdk/include/os_registry.h \
+  /opt/flex-secure-sdk/include/os_app.h \
   /opt/flex-secure-sdk/include/os_screen.h \
   /opt/flex-secure-sdk/include/os_seed.h \
   /opt/flex-secure-sdk/lib_cxng/include/lcx_ecfp.h \
@@ -63,4 +63,5 @@ build/flex/obj/app/src/apdu/dispatcher.o: /app/src/apdu/dispatcher.c \
   /opt/flex-secure-sdk/include/ox_bn.h \
   /opt/flex-secure-sdk/include/os_settings.h \
   /opt/flex-secure-sdk/include/syscalls.h \
-  /opt/flex-secure-sdk/include/os_apilevel.h
+  /opt/flex-secure-sdk/include/os_apilevel.h \
+  src/handler/encrypt_decrypt.h

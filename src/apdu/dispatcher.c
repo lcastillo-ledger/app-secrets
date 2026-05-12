@@ -27,6 +27,7 @@
 
 #include "get_version.h"
 #include "get_app_name.h"
+#include "encrypt_decrypt.h"
 
 int apdu_dispatcher(const command_t *cmd) {
     LEDGER_ASSERT(cmd != NULL, "NULL cmd");
@@ -47,6 +48,10 @@ int apdu_dispatcher(const command_t *cmd) {
                 return io_send_sw(SWO_INCORRECT_P1_P2);
             }
             return handler_get_app_name();
+
+        case ENCRYPT:
+        case DECRYPT:
+            return handler_encrypt_decrypt(cmd);
 
         default:
             return io_send_sw(SWO_INVALID_INS);
