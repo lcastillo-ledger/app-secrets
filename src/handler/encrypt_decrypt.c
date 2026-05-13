@@ -9,6 +9,8 @@
 
 #include "constants.h"
 #include "encrypt_decrypt.h"
+#include "display.h"
+#include "menu.h"
 #include "sw.h"
 
 typedef enum {
@@ -27,6 +29,8 @@ typedef struct {
     bool structure_type;
     bool version;
     bool trusted_name;
+    const uint8_t *trusted_name_ptr;
+    uint8_t trusted_name_len;
     bool time;
     bool cipher_suite;
     bool mime_type;
@@ -34,7 +38,19 @@ typedef struct {
     const uint8_t *nonce_ptr;
 } metadata_state_t;
 
+typedef struct {
+    bool active;
+    bool is_encrypt;
+    uint8_t trusted_name[65];
+    uint16_t tlvs_len;
+    uint8_t tlvs[SECRETS_MAX_METADATA_TLVS_WITHOUT_NONCE];
+    uint16_t header_len;
+    uint8_t header[SECRETS_MAX_METADATA_HEADER];
+    uint8_t nonce[SECRETS_GCM_NONCE_LEN];
+} consent_request_t;
+
 static secrets_session_t G_session;
+static consent_request_t G_consent;
 
 static const uint8_t MAGIC[] = {'L', 'D', 'G', '_', 'E', 'N', 'C', 'R'};
 static const uint8_t HKDF_SALT[] = {'l', 'e', 'd', 'g', 'e', 'r', '-', 'e', 'n', 'c', 'r', 'y', 'p', 't', ' ', 'v', '1'};
@@ -50,6 +66,18 @@ static const uint32_t DERIVATION_PATH[] = {
 static void session_clear(void) {
     explicit_bzero(&G_session, sizeof(G_session));
 }
+
+static void consent_clear(void) {
+    explicit_bzero(&G_consent, sizeof(G_consent));
+}
+
+static cx_err_t derive_aes_key(uint8_t key[static 32]);
+
+static int start_gcm_session(session_direction_t direction,
+                             const uint8_t *key,
+                             const uint8_t *nonce,
+                             const uint8_t *aad,
+                             size_t aad_len);
 
 static bool read_der_u16(const uint8_t *data, size_t len, size_t *offset, uint16_t *value) {
     if (*offset >= len) {
@@ -127,6 +155,8 @@ static uint16_t validate_metadata_tlvs(const uint8_t *tlvs,
             case SECRETS_TAG_TRUSTED_NAME:
                 if (state->trusted_name || length == 0 || length > 64) return SW_INVALID_DATA;
                 state->trusted_name = true;
+                state->trusted_name_ptr = value;
+                state->trusted_name_len = (uint8_t) length;
                 break;
             case SECRETS_TAG_TIME:
                 if (state->time || length != 4) return SW_INVALID_DATA;
@@ -161,6 +191,104 @@ static uint16_t validate_metadata_tlvs(const uint8_t *tlvs,
         return SW_INVALID_DATA;
     }
     return SWO_SUCCESS;
+}
+
+static bool consent_copy_name(const metadata_state_t *state) {
+    if ((state->trusted_name_ptr == NULL) || (state->trusted_name_len >= sizeof(G_consent.trusted_name))) {
+        return false;
+    }
+
+    memcpy(G_consent.trusted_name, state->trusted_name_ptr, state->trusted_name_len);
+    G_consent.trusted_name[state->trusted_name_len] = '\0';
+    return true;
+}
+
+static void finish_encrypt_init(bool confirmed) {
+    uint8_t key[SECRETS_AES_KEY_LEN] = {0};
+    uint8_t nonce[SECRETS_GCM_NONCE_LEN] = {0};
+    uint16_t sw;
+    size_t out_len = 0;
+
+    if (!confirmed) {
+        consent_clear();
+        io_send_sw(SW_DENIED);
+        return;
+    }
+
+    cx_rng_no_throw(nonce, sizeof(nonce));
+    if (derive_aes_key(key) != CX_OK) {
+        explicit_bzero(key, sizeof(key));
+        consent_clear();
+        io_send_sw(SW_EXECUTION_ERROR);
+        return;
+    }
+
+    memcpy(G_io_apdu_buffer, MAGIC, sizeof(MAGIC));
+    out_len = sizeof(MAGIC) + 2;
+    memcpy(G_io_apdu_buffer + out_len, G_consent.tlvs, G_consent.tlvs_len);
+    out_len += G_consent.tlvs_len;
+    if (!append_der_u16(G_io_apdu_buffer, SECRETS_MAX_METADATA_HEADER, &out_len, SECRETS_TAG_NONCE) ||
+        !append_der_u16(G_io_apdu_buffer, SECRETS_MAX_METADATA_HEADER, &out_len, SECRETS_GCM_NONCE_LEN) ||
+        out_len + sizeof(nonce) > SECRETS_MAX_METADATA_HEADER) {
+        explicit_bzero(key, sizeof(key));
+        explicit_bzero(nonce, sizeof(nonce));
+        consent_clear();
+        io_send_sw(SW_EXECUTION_ERROR);
+        return;
+    }
+    memcpy(G_io_apdu_buffer + out_len, nonce, sizeof(nonce));
+    out_len += sizeof(nonce);
+    uint16_t full_tlvs_len = (uint16_t) (out_len - sizeof(MAGIC) - 2);
+    G_io_apdu_buffer[sizeof(MAGIC)] = (uint8_t) (full_tlvs_len >> 8);
+    G_io_apdu_buffer[sizeof(MAGIC) + 1] = (uint8_t) full_tlvs_len;
+
+    sw = start_gcm_session(SESSION_ENCRYPT, key, nonce, G_io_apdu_buffer, out_len);
+    explicit_bzero(key, sizeof(key));
+    explicit_bzero(nonce, sizeof(nonce));
+    consent_clear();
+    if (sw != SWO_SUCCESS) {
+        session_clear();
+        io_send_sw(sw);
+        return;
+    }
+    (void) io_send_response_pointer(G_io_apdu_buffer, out_len, SWO_SUCCESS);
+    ui_menu_main();
+}
+
+static void finish_decrypt_init(bool confirmed) {
+    uint8_t key[SECRETS_AES_KEY_LEN] = {0};
+    uint16_t sw;
+
+    if (!confirmed) {
+        consent_clear();
+        io_send_sw(SW_DENIED);
+        return;
+    }
+
+    if (derive_aes_key(key) != CX_OK) {
+        explicit_bzero(key, sizeof(key));
+        consent_clear();
+        io_send_sw(SW_EXECUTION_ERROR);
+        return;
+    }
+    sw = start_gcm_session(SESSION_DECRYPT, key, G_consent.nonce, G_consent.header, G_consent.header_len);
+    explicit_bzero(key, sizeof(key));
+    consent_clear();
+    if (sw != SWO_SUCCESS) {
+        session_clear();
+        io_send_sw(sw);
+        return;
+    }
+    (void) io_send_sw(SWO_SUCCESS);
+    ui_menu_main();
+}
+
+static void encrypt_consent_callback(bool confirmed) {
+    finish_encrypt_init(confirmed);
+}
+
+static void decrypt_consent_callback(bool confirmed) {
+    finish_decrypt_init(confirmed);
 }
 
 static cx_err_t hkdf_sha256(const uint8_t *ikm, size_t ikm_len, uint8_t out[static 32]) {
@@ -217,13 +345,11 @@ static int encrypt_init(const command_t *cmd) {
     uint16_t tlvs_len;
     uint16_t sw;
     metadata_state_t state;
-    uint8_t nonce[SECRETS_GCM_NONCE_LEN] = {0};
-    uint8_t key[SECRETS_AES_KEY_LEN] = {0};
     uint8_t tlvs_copy[SECRETS_MAX_METADATA_TLVS_WITHOUT_NONCE] = {0};
-    size_t out_len = 0;
     const uint8_t *tlvs;
 
     session_clear();
+    consent_clear();
     if (cmd->lc < 2) return io_send_sw(SWO_WRONG_DATA_LENGTH);
     tlvs_len = (uint16_t) ((cmd->data[0] << 8) | cmd->data[1]);
     if (tlvs_len != cmd->lc - 2 || tlvs_len > SECRETS_MAX_METADATA_TLVS_WITHOUT_NONCE) {
@@ -235,36 +361,16 @@ static int encrypt_init(const command_t *cmd) {
     sw = validate_metadata_tlvs(tlvs, tlvs_len, false, true, &state);
     if (sw != SWO_SUCCESS) return io_send_sw(sw);
 
-    cx_rng_no_throw(nonce, sizeof(nonce));
-    if (derive_aes_key(key) != CX_OK) {
-        explicit_bzero(key, sizeof(key));
+    if (!consent_copy_name(&state)) return io_send_sw(SW_INVALID_DATA);
+    memcpy(G_consent.tlvs, tlvs, tlvs_len);
+    G_consent.tlvs_len = tlvs_len;
+    G_consent.is_encrypt = true;
+    G_consent.active = true;
+    if (ui_display_metadata_consent("Approve encryption", (const char *) G_consent.trusted_name, encrypt_consent_callback) < 0) {
+        consent_clear();
         return io_send_sw(SW_EXECUTION_ERROR);
     }
-
-    memcpy(G_io_apdu_buffer, MAGIC, sizeof(MAGIC));
-    out_len = sizeof(MAGIC) + 2;
-    memcpy(G_io_apdu_buffer + out_len, tlvs, tlvs_len);
-    out_len += tlvs_len;
-    if (!append_der_u16(G_io_apdu_buffer, SECRETS_MAX_METADATA_HEADER, &out_len, SECRETS_TAG_NONCE) ||
-        !append_der_u16(G_io_apdu_buffer, SECRETS_MAX_METADATA_HEADER, &out_len, SECRETS_GCM_NONCE_LEN) ||
-        out_len + sizeof(nonce) > SECRETS_MAX_METADATA_HEADER) {
-        explicit_bzero(key, sizeof(key));
-        return io_send_sw(SW_EXECUTION_ERROR);
-    }
-    memcpy(G_io_apdu_buffer + out_len, nonce, sizeof(nonce));
-    out_len += sizeof(nonce);
-    uint16_t full_tlvs_len = (uint16_t) (out_len - sizeof(MAGIC) - 2);
-    G_io_apdu_buffer[sizeof(MAGIC)] = (uint8_t) (full_tlvs_len >> 8);
-    G_io_apdu_buffer[sizeof(MAGIC) + 1] = (uint8_t) full_tlvs_len;
-
-    sw = start_gcm_session(SESSION_ENCRYPT, key, nonce, G_io_apdu_buffer, out_len);
-    explicit_bzero(key, sizeof(key));
-    explicit_bzero(nonce, sizeof(nonce));
-    if (sw != SWO_SUCCESS) {
-        session_clear();
-        return io_send_sw(sw);
-    }
-    return io_send_response_pointer(G_io_apdu_buffer, out_len, SWO_SUCCESS);
+    return 0;
 }
 
 static int decrypt_init(const command_t *cmd) {
@@ -272,11 +378,11 @@ static int decrypt_init(const command_t *cmd) {
     uint16_t tlvs_len;
     uint16_t sw;
     metadata_state_t state;
-    uint8_t key[SECRETS_AES_KEY_LEN] = {0};
     const uint8_t *header;
     const uint8_t *tlvs;
 
     session_clear();
+    consent_clear();
     if (cmd->lc < 1) return io_send_sw(SWO_WRONG_DATA_LENGTH);
     header_len = cmd->data[0];
     if (header_len != cmd->lc - 1 || header_len > SECRETS_MAX_METADATA_HEADER || header_len < sizeof(MAGIC) + 2) {
@@ -290,17 +396,17 @@ static int decrypt_init(const command_t *cmd) {
     sw = validate_metadata_tlvs(tlvs, tlvs_len, true, false, &state);
     if (sw != SWO_SUCCESS) return io_send_sw(sw);
 
-    if (derive_aes_key(key) != CX_OK) {
-        explicit_bzero(key, sizeof(key));
+    if (!consent_copy_name(&state)) return io_send_sw(SW_INVALID_DATA);
+    memcpy(G_consent.header, header, header_len);
+    memcpy(G_consent.nonce, state.nonce_ptr, sizeof(G_consent.nonce));
+    G_consent.header_len = header_len;
+    G_consent.is_encrypt = false;
+    G_consent.active = true;
+    if (ui_display_metadata_consent("Approve decryption", (const char *) G_consent.trusted_name, decrypt_consent_callback) < 0) {
+        consent_clear();
         return io_send_sw(SW_EXECUTION_ERROR);
     }
-    sw = start_gcm_session(SESSION_DECRYPT, key, state.nonce_ptr, header, header_len);
-    explicit_bzero(key, sizeof(key));
-    if (sw != SWO_SUCCESS) {
-        session_clear();
-        return io_send_sw(sw);
-    }
-    return io_send_sw(SWO_SUCCESS);
+    return 0;
 }
 
 static int update_chunk(const command_t *cmd, session_direction_t direction) {

@@ -1,8 +1,10 @@
 import pytest
+
 from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import HKDF
 from Crypto.Hash import SHA256
 from ragger.backend.interface import BackendInterface
+from ragger.navigator import NavInsID
 from ragger.error import ExceptionRAPDU
 
 from application_client.boilerplate_command_sender import BoilerplateCommandSender, Errors
@@ -52,8 +54,16 @@ def split_chunks(data: bytes) -> list[bytes]:
     return [data[i:i + MAX_CHUNK] for i in range(0, len(data), MAX_CHUNK)]
 
 
-def encrypt(client: BoilerplateCommandSender, plaintext: bytes) -> tuple[bytes, bytes, bytes]:
-    header = client.encrypt_init(metadata_tlvs()).data
+def encrypt_with_consent(client: BoilerplateCommandSender,
+                         backend: BackendInterface,
+                         navigator,
+                         plaintext: bytes) -> tuple[bytes, bytes, bytes]:
+    with client.encrypt_init_async(metadata_tlvs()):
+        navigator.navigate([NavInsID.USE_CASE_CHOICE_CONFIRM], screen_change_after_last_instruction=False)
+
+    rapdu = backend.last_async_response
+    assert rapdu is not None
+    header = rapdu.data
     assert header.startswith(MAGIC)
     tlv_len = int.from_bytes(header[8:10], "big")
     assert tlv_len == len(header) - 10
@@ -72,8 +82,18 @@ def encrypt(client: BoilerplateCommandSender, plaintext: bytes) -> tuple[bytes, 
     return header, ciphertext, tag
 
 
-def decrypt(client: BoilerplateCommandSender, header: bytes, ciphertext: bytes, tag: bytes) -> bytes:
-    client.decrypt_init(header)
+def decrypt(client: BoilerplateCommandSender,
+            backend: BackendInterface,
+            navigator,
+            header: bytes,
+            ciphertext: bytes,
+            tag: bytes) -> bytes:
+    with client.decrypt_init_async(header):
+        navigator.navigate([NavInsID.USE_CASE_CHOICE_CONFIRM], screen_change_after_last_instruction=False)
+
+    rapdu = backend.last_async_response
+    assert rapdu is not None
+    assert rapdu.status == 0x9000
     chunks = split_chunks(ciphertext)
     plaintext = b""
     for chunk in chunks[:-1]:
@@ -83,24 +103,25 @@ def decrypt(client: BoilerplateCommandSender, header: bytes, ciphertext: bytes, 
     return plaintext
 
 
-def test_encrypt_decrypt_roundtrip(backend: BackendInterface) -> None:
+def test_encrypt_decrypt_roundtrip(backend: BackendInterface, navigator) -> None:
     client = BoilerplateCommandSender(backend)
     plaintext = bytes(range(256)) + b"Ledger secrets" * 20
-    header, ciphertext, tag = encrypt(client, plaintext)
-    assert decrypt(client, header, ciphertext, tag) == plaintext
+    header, ciphertext, tag = encrypt_with_consent(client, backend, navigator, plaintext)
+    assert decrypt(client, backend, navigator, header, ciphertext, tag) == plaintext
 
 
-def test_empty_plaintext_roundtrip(backend: BackendInterface) -> None:
+def test_empty_plaintext_roundtrip(backend: BackendInterface, navigator) -> None:
     client = BoilerplateCommandSender(backend)
-    header, ciphertext, tag = encrypt(client, b"")
+    header, ciphertext, tag = encrypt_with_consent(client, backend, navigator, b"")
     assert ciphertext == b""
-    assert decrypt(client, header, ciphertext, tag) == b""
+    assert decrypt(client, backend, navigator, header, ciphertext, tag) == b""
 
 
-def test_tampered_tag_is_rejected(backend: BackendInterface) -> None:
+def test_tampered_tag_is_rejected(backend: BackendInterface, navigator) -> None:
     client = BoilerplateCommandSender(backend)
-    header, ciphertext, tag = encrypt(client, b"authenticated plaintext")
-    client.decrypt_init(header)
+    header, ciphertext, tag = encrypt_with_consent(client, backend, navigator, b"authenticated plaintext")
+    with client.decrypt_init_async(header):
+        navigator.navigate([NavInsID.USE_CASE_CHOICE_CONFIRM], screen_change_after_last_instruction=False)
     bad_tag = tag[:-1] + bytes([tag[-1] ^ 1])
     with pytest.raises(ExceptionRAPDU) as err:
         client.decrypt_final(ciphertext, bad_tag)
@@ -126,6 +147,20 @@ def test_unsupported_cipher_suite_is_rejected(backend: BackendInterface) -> None
     with pytest.raises(ExceptionRAPDU) as err:
         client.encrypt_init(metadata_tlvs(cipher_suite=2))
     assert err.value.status == Errors.SW_UNSUPPORTED_CIPHER_SUITE
+
+
+def test_missing_trusted_name_is_rejected(backend: BackendInterface) -> None:
+    client = BoilerplateCommandSender(backend)
+    tlvs = b"".join([
+        format_tlv(0x01, 0x34),
+        format_tlv(0x02, 1),
+        format_tlv(0x26, bytes.fromhex("6553f100")),
+        format_tlv(0x0101, 1),
+        format_tlv(0x0102, "text/plain"),
+    ])
+    with pytest.raises(ExceptionRAPDU) as err:
+        client.encrypt_init(tlvs)
+    assert err.value.status == Errors.SW_INVALID_DATA
 
 
 def test_documented_aes_gcm_vector() -> None:

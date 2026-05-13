@@ -70,6 +70,13 @@ class BoilerplateCommandSender:
                                      p2=0x00,
                                      data=len(metadata_tlvs).to_bytes(2, "big") + metadata_tlvs)
 
+    def encrypt_init_async(self, metadata_tlvs: bytes):
+        return self.backend.exchange_async(cla=CLA,
+                                           ins=InsType.ENCRYPT,
+                                           p1=P1.STAGE_INIT,
+                                           p2=0x00,
+                                           data=len(metadata_tlvs).to_bytes(2, "big") + metadata_tlvs)
+
     def encrypt_update(self, chunk: bytes) -> RAPDU:
         return self.backend.exchange(cla=CLA,
                                      ins=InsType.ENCRYPT,
@@ -91,6 +98,14 @@ class BoilerplateCommandSender:
                                      p1=P1.STAGE_INIT,
                                      p2=0x00,
                                      data=len(metadata_header).to_bytes(1, "big") + metadata_header)
+
+    def decrypt_init_async(self, metadata_header: bytes):
+        assert len(metadata_header) <= 255
+        return self.backend.exchange_async(cla=CLA,
+                                           ins=InsType.DECRYPT,
+                                           p1=P1.STAGE_INIT,
+                                           p2=0x00,
+                                           data=len(metadata_header).to_bytes(1, "big") + metadata_header)
 
     def decrypt_update(self, chunk: bytes) -> RAPDU:
         return self.backend.exchange(cla=CLA,

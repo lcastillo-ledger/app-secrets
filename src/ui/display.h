@@ -22,6 +22,17 @@
 typedef void (*action_validate_cb)(bool);
 
 /**
+ * Display a consent screen for metadata-based encryption/decryption.
+ *
+ * @param title consent screen title.
+ * @param trusted_name metadata trusted name to display.
+ * @param callback approval callback.
+ *
+ * @return 0 if the screen was queued, negative integer otherwise.
+ */
+int ui_display_metadata_consent(const char *title, const char *trusted_name, action_validate_cb callback);
+
+/**
  * Display address on the device and ask confirmation to export.
  *
  * @return 0 if success, negative integer otherwise.
